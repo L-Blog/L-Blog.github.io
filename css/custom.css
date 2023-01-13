@@ -106,7 +106,7 @@ img {
     border-radius: 8px;
   }
 
-  /* 文章页H1-H6图标样式效果 */
+/* 文章页H1-H6图标样式效果 */
 /* 控制风车转动速度 4s那里可以自己调节快慢 */
 h1::before,
 h2::before,
@@ -199,16 +199,4 @@ h6::before {
 #pagination {
   width: 100%;
   margin: auto;
-}
-
-/* 雪花特效 */
-[data-theme="light"] #snow{
-  display: block;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: -2;
 }
