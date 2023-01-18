@@ -223,6 +223,13 @@ div#archive {
   background: var(--trans-dark);
 }
 
+/* 白天模式遮罩透明 */
+#footer::before {
+  background: transparent !important;
+}
+#page-header::before {
+  background: transparent !important;
+}
 
 /* 夜间模式页脚页头遮罩透明 */
 [data-theme="dark"] #footer::before {
@@ -252,25 +259,15 @@ div#archive {
 
 /* 页脚与头图透明 */
 #footer {
-  background: transparent !important;
+  background: rgba(24, 23, 26, 0.3) !important;
 }
 #page-header {
   background: transparent !important;
 }
-
-/* 白天模式遮罩透明 */
-#footer::before {
+[data-theme="dark"] #footer {
   background: transparent !important;
 }
-#page-header::before {
-  background: transparent !important;
-}
-
-/* 夜间模式遮罩透明 */
-[data-theme="dark"] #footer::before {
-  background: transparent !important;
-}
-[data-theme="dark"] #page-header::before {
+[data-theme="dark"] #page-header {
   background: transparent !important;
 }
 
