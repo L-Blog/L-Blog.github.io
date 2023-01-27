@@ -1,0 +1,349 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>相关性模型 | ℒのℬ𝓁ℴℊ</title><meta name="author" content="ℒ"><meta name="copyright" content="ℒ"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="相关性模型">
+<meta property="og:type" content="article">
+<meta property="og:title" content="相关性模型">
+<meta property="og:url" content="https://l-blog.github.io/2023/01/26/%E7%9B%B8%E5%85%B3%E6%80%A7%E6%A8%A1%E5%9E%8B/index.html">
+<meta property="og:site_name" content="ℒのℬ𝓁ℴℊ">
+<meta property="og:description" content="相关性模型">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.loli.net/2023/01/14/qYuKMl453C9UfPQ.jpg">
+<meta property="article:published_time" content="2023-01-26T09:47:11.000Z">
+<meta property="article:modified_time" content="2023-01-27T08:37:01.524Z">
+<meta property="article:author" content="ℒ">
+<meta property="article:tag" content="SPSS">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2023/01/14/qYuKMl453C9UfPQ.jpg"><link rel="shortcut icon" href="https://s2.loli.net/2023/01/10/XciUPsnFZV41CxL.jpg"><link rel="canonical" href="https://l-blog.github.io/2023/01/26/%E7%9B%B8%E5%85%B3%E6%80%A7%E6%A8%A1%E5%9E%8B/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":230},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"top-right"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '相关性模型',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: true,
+  isToc: true,
+  postUpdate: '2023-01-27 16:37:01'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const now = new Date()
+          const hour = now.getHours()
+          const isNight = hour <= 6 || hour >= 18
+          if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+          else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><div id="myscoll"></div><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css" media="print" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/01/10/lxbhDWp1BicJwug.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-clone"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-comment"></i><span> 社交</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友人帐</span></a></li><li><a class="site-page child" href="/comments/"><i class="fa-fw fas fa-envelope-open"></i><span> 留言板</span></a></li><li><a class="site-page child" href="/book/"><i class="fa-fw fas fa-book"></i><span> 随笔</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/diary/"><i class="fa-fw fas fa-heart"></i><span> 恋爱小屋</span></a></div><div class="menus_item"><a class="site-page" href="/photos/"><i class="fa-fw fas fa-photo-video"></i><span> 相册</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://s2.loli.net/2023/01/14/qYuKMl453C9UfPQ.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">ℒのℬ𝓁ℴℊ</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-clone"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-comment"></i><span> 社交</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友人帐</span></a></li><li><a class="site-page child" href="/comments/"><i class="fa-fw fas fa-envelope-open"></i><span> 留言板</span></a></li><li><a class="site-page child" href="/book/"><i class="fa-fw fas fa-book"></i><span> 随笔</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/diary/"><i class="fa-fw fas fa-heart"></i><span> 恋爱小屋</span></a></div><div class="menus_item"><a class="site-page" href="/photos/"><i class="fa-fw fas fa-photo-video"></i><span> 相册</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">相关性模型</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-01-26T09:47:11.000Z" title="发表于 2023-01-26 17:47:11">2023-01-26</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-01-27T08:37:01.524Z" title="更新于 2023-01-27 16:37:01">2023-01-27</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%95%B0%E6%A8%A1/">数模</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.5k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>5分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="相关性模型"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="相关系数"><a href="#相关系数" class="headerlink" title="相关系数"></a>相关系数</h1><p>&emsp;&emsp;作用：来衡量两个变量之间的相关性大小的指标<br>&emsp;&emsp;常用的相关系数：</p>
+<ul>
+<li>皮尔逊pearson相关系数</li>
+<li>斯皮尔曼spearman等级相关系数<br><strong>注：根据数据满足的不同条件，要选择不同的相关系数进行计算和分析</strong><br></li>
+</ul>
+<h2 id="皮尔逊相关系数"><a href="#皮尔逊相关系数" class="headerlink" title="皮尔逊相关系数"></a>皮尔逊相关系数</h2><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/01/27/mT97CP4XQ8LRnFM.jpg" alt=""><br>&emsp;&emsp;<font color=red font size=4>误区：</font></p>
+<ol>
+<li>皮尔逊相关系数是用来衡量两个变量线性相关程度的指标，必须<font color=red>先确认这两个变量是线性相关的</font>，然后这个相关系数才能说明这俩相关程度如何。</li>
+<li>非线性相关也会导致线性相关系数很大</li>
+<li>离群点对相关系数的影响很大</li>
+<li>如果两个变量的相关系数很大也不能说明两者相关，可能是受到了异常值的影响。</li>
+<li>相关系数计算结果为0，只能说不是线性相关，但说不定会有更复杂的相关关系（非线性相关）</li>
+</ol>
+<p>&emsp;&emsp;<font color=red font size=4>总结：</font></p>
+<ol>
+<li>如果两个变量本身就是线性的关系，那么皮尔逊相关系数绝对值大的就是相关性强，小的就是相关性弱；</li>
+<li>在不确定两个变量是什么关系的情况下，即使算出皮尔逊相关系数，发现很大，也不能说明那两个变量线性相关，甚至不能说他们相关，一定要画出散点图来看才行</li>
+</ol>
+<h3 id="描述性统计（SPSS）"><a href="#描述性统计（SPSS）" class="headerlink" title="描述性统计（SPSS）"></a>描述性统计（SPSS）</h3><ol>
+<li>将Excel表中数据导入SPSS中</li>
+<li><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/01/27/PE5GT6tM84hBrVl.jpg" alt=""></li>
+</ol>
+<h3 id="两组变量之间是否线性相关"><a href="#两组变量之间是否线性相关" class="headerlink" title="两组变量之间是否线性相关"></a>两组变量之间是否线性相关</h3><p>&emsp;&emsp;<strong>做散点图，让相关性可视化(SPSS): 图形 ‐ 旧对话框 ‐ 散点图/点图 ‐ 矩阵散点图</strong><br>&emsp;&emsp;观察（意思一下）</p>
+<h3 id="皮尔逊相关系数及P值（假设检验中有解释）的计算"><a href="#皮尔逊相关系数及P值（假设检验中有解释）的计算" class="headerlink" title="皮尔逊相关系数及P值（假设检验中有解释）的计算"></a>皮尔逊相关系数及P值（假设检验中有解释）的计算</h3><ol>
+<li>用Matlab中的corrcoef函数<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[R,P] = corrcoef(A)  </span><br></pre></td></tr></table></figure>
+返回 A 的相关系数表R以及每个相关系数的p值P，其中 A 的每一列都表示一个变量（指标），每一行表示一个样本</li>
+<li>相关系数表R的美化（Excel）<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/01/27/5ijqJ4mSpR3WzD9.jpg" alt=""></li>
+</ol>
+<h3 id="对皮尔逊相关系数进行假设检验"><a href="#对皮尔逊相关系数进行假设检验" class="headerlink" title="对皮尔逊相关系数进行假设检验"></a>对皮尔逊相关系数进行假设检验</h3><p>&emsp;&emsp;<font size=4>原理:</font></p>
+<ol>
+<li>问题<br>对此，提出零假设（原假设）和备选假设，两者在逻辑方面是互补的。如果其中一个假设为真，则另一个假设为假；如果我们推翻了其中一个假设，那就必须承认另一个假设。<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/01/27/efFScAMpaWg6bXB.jpg" alt=""></li>
+<li>证据<br>根据中心极限定理，我们知道，合理足够多的样本可以代表总体。根据这些样本数据显示出来的证据，利用统计概率知识，便可以计算出在零假设成立的前提下，得到样本观察结果（平均值）出现的概率，这个概率叫p值。</li>
+<li>判断标准</li>
+</ol>
+<ul>
+<li>“显著水平”，用符号α表示，指有多大可能拒绝原假设。</li>
+<li>“置信水平”，用符号β表示，β=1-α，是相信原假设成立的概率，一般为90%。95%，99%。</li>
+</ul>
+<ol>
+<li>做出结论<br>用p值与β进行比较（也可以与α比较）<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/01/27/QUJbwOtRGravEWm.jpg" alt=""></li>
+</ol>
+<p>&emsp;&emsp;<font color=red font size=4>条件：</font></p>
+<ol>
+<li><strong>实验数据通常假设是成对的来自于正态分布的总体。</strong>因为我们在求皮尔逊相关性系数以后，通常还会用t检验之类的方法来进行皮尔逊相关性系数检验，<br>而t检验是基于数据呈正态分进行假设。</li>
+<li><strong>实验数据之间的差距不能太大。</strong>皮尔逊相关性系数受异常值的影响比较大。</li>
+<li><strong>每组样本之间是独立抽样的。</strong>构造t统计量时需要用到。</li>
+</ol>
+<p>&emsp;&emsp;<font  size=4><strong>对数据进行显著性符号的标记：</strong></font></p>
+<ul>
+<li><strong>SPSS：分析 - 相关 - 双变量</strong></li>
+<li><strong>Matlab:</strong><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[R,P] = corrcoef(A)</span><br><span class="line"><span class="comment">% 在EXCEL表格中给数据右上角标上显著性符号</span></span><br><span class="line">P &lt; <span class="number">0.01</span>  <span class="comment">% 标记3颗星的位置</span></span><br><span class="line">(P &lt; <span class="number">0.05</span>) .* (P &gt; <span class="number">0.01</span>)  <span class="comment">% 标记2颗星的位置</span></span><br><span class="line">(P &lt; <span class="number">0.1</span>) .* (P &gt; <span class="number">0.05</span>) <span class="comment">% % 标记1颗星的位置</span></span><br></pre></td></tr></table></figure>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/01/27/OAwsgQamWVBfGUK.jpg" alt=""></li>
+</ul>
+<h3 id="对数据进行正态分布检验"><a href="#对数据进行正态分布检验" class="headerlink" title="对数据进行正态分布检验"></a>对数据进行正态分布检验</h3><ol>
+<li>小样本（3≤n≤50），采用Shapiro-wilk检验<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/01/27/7c8sN1lZepCI6qB.jpg" alt=""></li>
+<li>大样本 (n&gt;30),采用Jarque‐Bera检验<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/01/27/TUpwvXWydM6Bu8D.jpg" alt=""><br>采用Matlab进行JB检验,[h,p] = jbtest(x,alpha)<br>当输出h等于1时，表示拒绝原假设；h等于0则代表不能拒绝原假设<br>alpha就是显著性水平，一般取0.05，此时置信水平为1‐0.05=0.95<br>x就是要检验的随机变量，<strong>这里的x只能是向量</strong><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">n_c = <span class="built_in">size</span>(Test,<span class="number">2</span>);  <span class="comment">% number of column 数据的列数</span></span><br><span class="line">H = <span class="built_in">zeros</span>(<span class="number">1</span>,<span class="number">6</span>);  <span class="comment">% 初始化节省时间和消耗</span></span><br><span class="line">P = <span class="built_in">zeros</span>(<span class="number">1</span>,<span class="number">6</span>);</span><br><span class="line"><span class="keyword">for</span> <span class="built_in">i</span> = <span class="number">1</span>:n_c</span><br><span class="line">    [h,p] = jbtest(Test(:,<span class="built_in">i</span>),<span class="number">0.05</span>);</span><br><span class="line">    H(<span class="built_in">i</span>)=h;</span><br><span class="line">    P(<span class="built_in">i</span>)=p;</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="built_in">disp</span>(H)</span><br><span class="line"><span class="built_in">disp</span>(P)</span><br></pre></td></tr></table></figure></li>
+<li>数据量非常大,用Q‐Q图<br>要利用Q‐Q图鉴别样本数据是否近似于正态分布,只需看Q‐Q图上的点是否近似地在一条直线附近。<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">qqplot(x)</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="斯皮尔曼相关系数"><a href="#斯皮尔曼相关系数" class="headerlink" title="斯皮尔曼相关系数"></a>斯皮尔曼相关系数</h2><ul>
+<li>定义1：（不常用）<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/01/27/myo2O5sEWY6tlXn.jpg" alt=""></li>
+<li>定义2：等级之间的皮尔逊相关系数<font color=red font size=4>前面步骤和皮尔逊相关系数一样</font>
+
+</li>
+</ul>
+<h3 id="斯皮尔曼相关系数的计算"><a href="#斯皮尔曼相关系数的计算" class="headerlink" title="斯皮尔曼相关系数的计算"></a>斯皮尔曼相关系数的计算</h3><ul>
+<li>corr(X , Y , ‘type’ , ‘Spearman’)<br>X和Y必须是列向量</li>
+<li>corr(X , ‘type’ , ‘Spearman’)<br>计算X矩阵各列之间的斯皮尔曼相关系数</li>
+</ul>
+<h3 id="斯皮尔曼相关系数的假设检验"><a href="#斯皮尔曼相关系数的假设检验" class="headerlink" title="斯皮尔曼相关系数的假设检验"></a>斯皮尔曼相关系数的假设检验</h3><ol>
+<li>小样本（n≤30），查临界值表<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/01/27/C4BWu8wbmF9Hl3p.jpg" alt=""></li>
+<li>大样本<br>[R,P]=corr(Test, ‘type’ , ‘Spearman’)<br>计算出相关系数和p值</li>
+</ol>
+<h2 id="两种相关系数的选择"><a href="#两种相关系数的选择" class="headerlink" title="两种相关系数的选择"></a>两种相关系数的选择</h2><ol>
+<li>连续数据，正态分布，线性关系，用pearson相关系数是最恰当，用spearman相关系数效率不高</li>
+<li>上述任一条件不满足，就用spearman相关系数，不能用pearson相关系数</li>
+<li>两个定序数据之间也用spearman相关系数，不能用pearson相关系数<ul>
+<li>定序数据是指仅仅反映观测对象等级、顺序关系的数据，是由定序尺度计量形成的，表现为类别，可以进行排序，属于品质数据，如优，良，差</li>
+</ul>
+</li>
+<li>斯皮尔曼相关系数的适用条件比皮尔逊相关系数要广，只要数据满足单调关系（例如线性函数、指数函数、对数函数等）就能够使用</li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://l-blog.github.io">ℒ</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://l-blog.github.io/2023/01/26/%E7%9B%B8%E5%85%B3%E6%80%A7%E6%A8%A1%E5%9E%8B/">https://l-blog.github.io/2023/01/26/%E7%9B%B8%E5%85%B3%E6%80%A7%E6%A8%A1%E5%9E%8B/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://l-blog.github.io" target="_blank">ℒのℬ𝓁ℴℊ</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/SPSS/">SPSS</a></div><div class="post_share"><div class="social-share" data-image="https://s2.loli.net/2023/01/14/qYuKMl453C9UfPQ.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/2023/01/17/%E6%8F%92%E5%80%BC%E4%B8%8E%E6%8B%9F%E5%90%88%E6%A8%A1%E5%9E%8B/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/01/14/WaXO8b1fEwliLmy.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">插值与拟合模型</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/01/10/lxbhDWp1BicJwug.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">ℒ</div><div class="author-info__description">为世界上所有的美好而战!</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/L-Blog"><i class="fab fa-github"></i><span>认识我</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/L-Blog" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:2066067998@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://s2.loli.net/2023/01/13/rmfhpcGbYTBIq27.jpg" target="_blank" title="Wechat"><i class="fab fa-weixin"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%9B%B8%E5%85%B3%E7%B3%BB%E6%95%B0"><span class="toc-number">1.</span> <span class="toc-text">相关系数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9A%AE%E5%B0%94%E9%80%8A%E7%9B%B8%E5%85%B3%E7%B3%BB%E6%95%B0"><span class="toc-number">1.1.</span> <span class="toc-text">皮尔逊相关系数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%8F%E8%BF%B0%E6%80%A7%E7%BB%9F%E8%AE%A1%EF%BC%88SPSS%EF%BC%89"><span class="toc-number">1.1.1.</span> <span class="toc-text">描述性统计（SPSS）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%A4%E7%BB%84%E5%8F%98%E9%87%8F%E4%B9%8B%E9%97%B4%E6%98%AF%E5%90%A6%E7%BA%BF%E6%80%A7%E7%9B%B8%E5%85%B3"><span class="toc-number">1.1.2.</span> <span class="toc-text">两组变量之间是否线性相关</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9A%AE%E5%B0%94%E9%80%8A%E7%9B%B8%E5%85%B3%E7%B3%BB%E6%95%B0%E5%8F%8AP%E5%80%BC%EF%BC%88%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C%E4%B8%AD%E6%9C%89%E8%A7%A3%E9%87%8A%EF%BC%89%E7%9A%84%E8%AE%A1%E7%AE%97"><span class="toc-number">1.1.3.</span> <span class="toc-text">皮尔逊相关系数及P值（假设检验中有解释）的计算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E7%9A%AE%E5%B0%94%E9%80%8A%E7%9B%B8%E5%85%B3%E7%B3%BB%E6%95%B0%E8%BF%9B%E8%A1%8C%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C"><span class="toc-number">1.1.4.</span> <span class="toc-text">对皮尔逊相关系数进行假设检验</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E6%95%B0%E6%8D%AE%E8%BF%9B%E8%A1%8C%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83%E6%A3%80%E9%AA%8C"><span class="toc-number">1.1.5.</span> <span class="toc-text">对数据进行正态分布检验</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%AF%E7%9A%AE%E5%B0%94%E6%9B%BC%E7%9B%B8%E5%85%B3%E7%B3%BB%E6%95%B0"><span class="toc-number">1.2.</span> <span class="toc-text">斯皮尔曼相关系数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%AF%E7%9A%AE%E5%B0%94%E6%9B%BC%E7%9B%B8%E5%85%B3%E7%B3%BB%E6%95%B0%E7%9A%84%E8%AE%A1%E7%AE%97"><span class="toc-number">1.2.1.</span> <span class="toc-text">斯皮尔曼相关系数的计算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%AF%E7%9A%AE%E5%B0%94%E6%9B%BC%E7%9B%B8%E5%85%B3%E7%B3%BB%E6%95%B0%E7%9A%84%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C"><span class="toc-number">1.2.2.</span> <span class="toc-text">斯皮尔曼相关系数的假设检验</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%A4%E7%A7%8D%E7%9B%B8%E5%85%B3%E7%B3%BB%E6%95%B0%E7%9A%84%E9%80%89%E6%8B%A9"><span class="toc-number">1.3.</span> <span class="toc-text">两种相关系数的选择</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/01/26/%E7%9B%B8%E5%85%B3%E6%80%A7%E6%A8%A1%E5%9E%8B/" title="相关性模型"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/01/14/qYuKMl453C9UfPQ.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="相关性模型"/></a><div class="content"><a class="title" href="/2023/01/26/%E7%9B%B8%E5%85%B3%E6%80%A7%E6%A8%A1%E5%9E%8B/" title="相关性模型">相关性模型</a><time datetime="2023-01-26T09:47:11.000Z" title="发表于 2023-01-26 17:47:11">2023-01-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/01/17/%E6%8F%92%E5%80%BC%E4%B8%8E%E6%8B%9F%E5%90%88%E6%A8%A1%E5%9E%8B/" title="插值与拟合模型"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/01/14/WaXO8b1fEwliLmy.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="插值与拟合模型"/></a><div class="content"><a class="title" href="/2023/01/17/%E6%8F%92%E5%80%BC%E4%B8%8E%E6%8B%9F%E5%90%88%E6%A8%A1%E5%9E%8B/" title="插值与拟合模型">插值与拟合模型</a><time datetime="2023-01-17T08:00:00.000Z" title="发表于 2023-01-17 16:00:00">2023-01-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/01/13/%E8%AF%84%E4%BB%B7%E7%B1%BB%E6%A8%A1%E5%9E%8B/" title="评价类模型"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/01/14/JTxYg5vw1rUplCa.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="评价类模型"/></a><div class="content"><a class="title" href="/2023/01/13/%E8%AF%84%E4%BB%B7%E7%B1%BB%E6%A8%A1%E5%9E%8B/" title="评价类模型">评价类模型</a><time datetime="2023-01-13T08:00:00.000Z" title="发表于 2023-01-13 16:00:00">2023-01-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/01/10/Matlab%E5%85%A5%E9%97%A8/" title="Matlab入门"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/01/14/qcsAQpR4eBagX87.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Matlab入门"/></a><div class="content"><a class="title" href="/2023/01/10/Matlab%E5%85%A5%E9%97%A8/" title="Matlab入门">Matlab入门</a><time datetime="2023-01-10T05:59:04.000Z" title="发表于 2023-01-10 13:59:04">2023-01-10</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="ft"><div class="ft-item-1"><div class="t-top"><div class="t-t-l"><p class="ft-t t-l-t">修仙语录</p><div class="bg-ad"><div>曾经天上三千劫，又在人间五百年。<br >腰下剑锋横紫电，炉中丹焰起苍烟。<br >才骑白鹿过苍海，复跨青牛入洞天。<br >小技等闲聊戏尔，无人知我是真仙。</div><div class="btn-xz-box"><a class="btn-xz" target="_blank" rel="noopener" href="https://www.4399.com/">点击开启修仙之路</a></div></div></div><div class="t-t-r"><p class="ft-t t-l-t">网站导航</p><ul class="ft-links"><li><a href="/diary/">恋爱小屋</a><a href="/archives/">文章归档</a></li><li><a href="/categories/">文章分类</a><a href="/tags/">文章标签</a></li><li><a href="/comments/">留言板</a><a href="/book/">随笔</a></li></ul></div></div></div><div class="ft-item-2"><p class="ft-t">推荐友链</p><div class="ft-img-group"><div class="img-group-item"><a target="_blank" rel="noopener" href="https://www.fomal.cc/" title="Fomalhaut🥝"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/60e5d4e39da7c077.webp" alt=""/></a></div><div class="img-group-item"><a target="_blank" rel="noopener" href="https://frechen026.github.io/" title="Frechen026"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://git.nju.edu.cn/211250026/picture/-/raw/main/blog_picture/avatar.jpeg" alt=""/></a></div></div></div></div><div class="copyright"><span><b>&copy;2023</b></span><span><b>&nbsp;&nbsp;By ℒ</b></span></div><div class="footer_custom_text">愿你前行的道路有群星闪耀，愿你留下的足迹有百花绽放。<br />你即是上帝的馈赠，世界因你而瑰丽。✨✨</div><div id="workboard"></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" title="博客框架为Hexo_v6.3.0"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.ladydaily.com/badge/Frame-Hexo-blue.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://butterfly.js.org/" style="margin-inline:5px" title="主题版本Butterfly_v4.3.1"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.ladydaily.com/badge/Theme-Butterfly-6513df.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://vercel.com/" style="margin-inline:5px" title="本站采用多线部署，主线路托管于Vercel"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.ladydaily.com/badge/Hosted-Vercel-brightgreen.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" title="本网站源码由Github提供存储仓库"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.ladydaily.com/badge/Source-Github-d021d6.svg" alt=""/></a><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" title=" 本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&amp;logo=Claris" alt=""/></a></p></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button><button id="go-down" type="button" title="直达底部" onclick="btf.scrollToDest(document.body.scrollHeight, 500)"><i class="fas fa-arrow-down"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><script defer src="https://npm.elemecdn.com/jquery@latest/dist/jquery.min.js"></script><script defer data-pjax src="/js/cat.js"></script><canvas id="snow"></canvas><script async src="/js/snow.js"></script><canvas id="universe"></canvas><script async src="/js/universe.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="30" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script src="/"></script><script>let pjaxSelectors = [
+    'title',
+    '#config-diff',
+    '#body-wrap',
+    '#rightside-config-hide',
+    '#rightside-config-show',
+    '#web_bg',
+    '.js-pjax'
+]
+
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script data-pjax>
+  function butterfly_swiper_injector_config(){
+    var parent_div_git = document.getElementById('recent-posts');
+    var item_html = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms;"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2023/01/26/相关性模型/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/01/14/qYuKMl453C9UfPQ.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-01-26</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2023/01/26/相关性模型/&quot;);" href="javascript:void(0);" alt="">相关性模型</a><div class="blog-slider__text">相关性模型</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2023/01/26/相关性模型/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2023/01/17/插值与拟合模型/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/01/14/WaXO8b1fEwliLmy.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-01-17</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2023/01/17/插值与拟合模型/&quot;);" href="javascript:void(0);" alt="">插值与拟合模型</a><div class="blog-slider__text">插值与拟合模型</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2023/01/17/插值与拟合模型/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2023/01/13/评价类模型/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/01/14/JTxYg5vw1rUplCa.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-01-13</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2023/01/13/评价类模型/&quot;);" href="javascript:void(0);" alt="">评价类模型</a><div class="blog-slider__text">评价类模型</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2023/01/13/评价类模型/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2023/01/10/Matlab入门/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/01/14/qcsAQpR4eBagX87.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-01-10</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2023/01/10/Matlab入门/&quot;);" href="javascript:void(0);" alt="">Matlab入门</a><div class="blog-slider__text">Matlab入门</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2023/01/10/Matlab入门/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载butterfly_swiper')
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  var elist = 'undefined'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_swiper_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_swiper_injector_config();
+  }
+  </script><script defer src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer data-pjax src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js"></script><!-- hexo injector body_end end --></body></html>
