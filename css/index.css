@@ -6669,12 +6669,14 @@ div#archive {
   border-radius: 10px;
 }
 
+/* 字体 */
 @font-face {
   font-family: ZhuZiAYuanJWD;
   src: url(https://npm.elemecdn.com/anzhiyu-blog@1.1.6/fonts/ZhuZiAWan.woff2);
   font-display: swap;
   font-weight: lighter;
 }
+
 
 /* 侧边栏tags样式修改 */
 #aside-content .card-tag-cloud a {
@@ -6700,6 +6702,18 @@ div#archive {
 #aside-content .card-tag-cloud a sup {
   opacity: 0.4;
   margin-left: 2px;
+}
+
+/* 小冰分类分类磁铁黑夜模式适配 */
+/* 一般状态 */
+[data-theme="dark"] .magnet_link_context {
+  background: #1e1e1e;
+  color: antiquewhite;
+}
+/* 鼠标悬浮状态 */
+[data-theme="dark"] .magnet_link_context:hover {
+  background: #593ef1;
+  color: #f2f2f2;
 }
 /* 雪花特效 */
 [data-theme="light"] #snow{
