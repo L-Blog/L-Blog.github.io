@@ -4,11 +4,36 @@
   
     
     <entry>
+      <title>Discrete-Time Signals in the Time Domain</title>
+      <link href="/posts/56f08ac1.html"/>
+      <url>/posts/56f08ac1.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="Time-Domain-Representation-时域表示"><a href="#Time-Domain-Representation-时域表示" class="headerlink" title="Time-Domain Representation(时域表示)"></a>Time-Domain Representation(时域表示)</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> DSP </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 坐牢 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>信号与系统复习总结</title>
       <link href="/posts/adf8fb25.html"/>
       <url>/posts/adf8fb25.html</url>
       
-        <content type="html"><![CDATA[<h2 id="信号与系统的基本概念"><a href="#信号与系统的基本概念" class="headerlink" title="信号与系统的基本概念"></a>信号与系统的基本概念</h2><details class="folding-tag" blue><summary> 详解 </summary>              <div class='content'>              <ol><li>线性系统判断<ul><li>x(t)与q(0)，y(t)分开,且为加减法</li><li>无常数项</li><li>x(t),y(t)前系数无要求</li><li>y(t),x(t)可以独自求导，积分，但不能进行平方，取对数，取倒数之类的复合运算</li></ul></li><li>时不变系统判断<ul><li>x(t),y(t)前系数为常数</li><li>t或k前系数必须为1</li><li>可以对x(t),y(t)进行积分，求导或复合运算</li><li>x(t)与q(0)，y(t)可以相乘</li><li>q(0),x(t)不能随时间变化</li></ul></li></ol>              </div>            </details>]]></content>
+        <content type="html"><![CDATA[<h2 id="信号与系统的基本概念"><a href="#信号与系统的基本概念" class="headerlink" title="信号与系统的基本概念"></a>信号与系统的基本概念</h2><details class="folding-tag" blue><summary> 详解 </summary>              <div class='content'>              <ol><li>线性系统判断<ul><li>x(t)与q(0)，y(t)分开,且为加减法</li><li>无常数项</li><li>x(t),y(t)前系数无要求</li><li>y(t),x(t)可以独自求导，积分，但不能进行平方，取对数，取倒数之类的复合运算</li></ul></li><li>时不变系统判断<ul><li>x(t),y(t)前系数为常数</li><li>t或k前系数必须为1</li><li>可以对x(t),y(t)进行积分，求导或复合运算</li><li>x(t)与q(0)，y(t)可以相乘</li><li>q(0),x(t)不能随时间变化</li></ul></li></ol>              </div>            </details><h2 id="连续时间信号与系统的时域分析"><a href="#连续时间信号与系统的时域分析" class="headerlink" title="连续时间信号与系统的时域分析"></a>连续时间信号与系统的时域分析</h2><details class="folding-tag" blue><summary> 详解 </summary>              <div class='content'>              <ul><li>冲激函数筛选性的推广：<script type="math/tex; mode=display">\int_{-\infty}^\infty δ^{(n)}(t)ψ(t)dt=(-1)^{(n)}ψ^{(n)}(0)</script></li></ul>              </div>            </details><h2 id="离散时间信号与系统的时域分析"><a href="#离散时间信号与系统的时域分析" class="headerlink" title="离散时间信号与系统的时域分析"></a>离散时间信号与系统的时域分析</h2><details class="folding-tag" blue><summary> 详解 </summary>              <div class='content'>              <ol><li>离散卷积定义式：<script type="math/tex; mode=display">y_{zs}(k)=x(k)﹡h(k)=\sum_{n=-\infty}^{\infty}x(n)h(k-n)</script></li><li>离散卷积不进位乘法：<br>末尾对齐，不进位，在0时刻下划线</li></ol>              </div>            </details>]]></content>
       
       
       <categories>
@@ -36,6 +61,12 @@
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> 坐牢 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -112,9 +143,9 @@
             
             <tag> Matlab </tag>
             
-            <tag> SPSS </tag>
-            
             <tag> Stata </tag>
+            
+            <tag> SPSS </tag>
             
             <tag> 评价问题 </tag>
             
@@ -168,9 +199,9 @@
       
         <tags>
             
-            <tag> SPSS </tag>
-            
             <tag> 预测问题 </tag>
+            
+            <tag> SPSS </tag>
             
         </tags>
       
@@ -195,9 +226,9 @@
       
         <tags>
             
-            <tag> 分类问题 </tag>
-            
             <tag> Stata </tag>
+            
+            <tag> 分类问题 </tag>
             
         </tags>
       
