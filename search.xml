@@ -4,11 +4,36 @@
   
     
     <entry>
+      <title>Discrete-Time Signals in the Frequency-Domain</title>
+      <link href="/posts/8d897bfa.html"/>
+      <url>/posts/8d897bfa.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="The-Continuous-Time-Fourier-Transform-连续时间的傅里叶变换"><a href="#The-Continuous-Time-Fourier-Transform-连续时间的傅里叶变换" class="headerlink" title="The Continuous-Time Fourier Transform(连续时间的傅里叶变换)"></a>The Continuous-Time Fourier Transform(连续时间的傅里叶变换)</h2><ol><li>傅里叶级数：<ul><li>三角形式傅里叶级数</li><li>指数形式傅里叶级数：通过欧拉公式 $cosnwt=\frac{e^{jnwt}+e^{-jnwt}}{2}$ 由三角形式转换</li></ul></li><li>对于周期信号的频谱，本质是通过指数形式的傅里叶展开，系数为 $F_{n}$ ，是复指数，随nΩ变换<ul><li>从频域(nΩ)的维度来看(Ω为2Π/T),频谱离散,研究的其实是不同的nΩ下, $F_{n}$ 的幅度以及相位</li></ul></li><li>对于非周期信号的频谱，实际是频谱密度函数F(w)= $F_{n}T$，可看作其周期T无限大，Ω趋于0<ul><li>从频域(nΩ)的维度来看,频域连续,研究的F(w)的幅度及相位，傅里叶反变换 (傅里叶积分)，本质上依旧是f(t)的傅里叶指数形式展开，将系数 $F_{n}$转换成 $ \frac{F(w)}{2\pi}dΩ$（因为Ω无限小），求和变为积分</li></ul></li></ol><h2 id="Discrete-Time-Fourier-Transform-离散时间的傅里叶变换"><a href="#Discrete-Time-Fourier-Transform-离散时间的傅里叶变换" class="headerlink" title="Discrete-Time Fourier Transform(离散时间的傅里叶变换)"></a>Discrete-Time Fourier Transform(离散时间的傅里叶变换)</h2><ol><li>变换对：<br><img src="https://s2.loli.net/2023/02/23/Piq2fm7tJQG9R38.jpg" alt=""></li><li>相位谱的范围在 $-\pi$ 到 $\pi$</li><li>x[n]是实数时的重要结论：<ul><li>x[n]为偶函数，傅里叶变换后是实数</li><li>x[n]为奇函数，傅里叶变换后是虚数</li></ul></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> DSP </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 坐牢 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Discrete-Time Signals in the Time Domain</title>
       <link href="/posts/56f08ac1.html"/>
       <url>/posts/56f08ac1.html</url>
       
-        <content type="html"><![CDATA[<h2 id="Time-Domain-Representation-时域表示"><a href="#Time-Domain-Representation-时域表示" class="headerlink" title="Time-Domain Representation(时域表示)"></a>Time-Domain Representation(时域表示)</h2><ol><li>序列的时间维度：<ul><li>finite-length sequence(有限长序列):<br>可通过补零(zero-padding)增加序列长度</li><li>infinite-length sequence(无限长序列)：<br>right-sided sequence(右边序列，N&lt; N_{1},x[n]=0)，causal sequence(因果序列)，two-sided sequence(双边序列，有限个0)</li></ul></li><li>序列的振幅值维度：<ul><li>complex conjugate sequence(复共轭序列)：实部(real parts)相同，虚部(imaginary parts)互为相反数</li></ul></li><li>序列的长度即为数的个数</li></ol><h2 id="Operations-on-Sequences-序列运算"><a href="#Operations-on-Sequences-序列运算" class="headerlink" title="Operations on Sequences(序列运算)"></a>Operations on Sequences(序列运算)</h2><ol><li>不等长序列的基本运算(Elementary  Operations)：补零，并使时间对齐</li><li>Convolution Sum(卷积和)：<script type="math/tex; mode=display">y[n]=x[n]*h[n]=\sum_{k=-\infty}^{\infty}x[k]h[n-k]</script></li><li>两个序列卷积得到的新序列长度为N+M-1</li></ol><h2 id="Operations-on-Finite-Length-Sequences-有限长序列运算"><a href="#Operations-on-Finite-Length-Sequences-有限长序列运算" class="headerlink" title="Operations on Finite-Length Sequences(有限长序列运算)"></a>Operations on Finite-Length Sequences(有限长序列运算)</h2><ol><li>modulo operation(模运算): ${&lt; m &gt;}_{N}$</li><li>对于有限长序列运算，有限长序列的时间范围限定在0≤n≤N-1</li><li>有限长序列运算:<ul><li>Circular Time-shift Operation(循环时移运算)： $x[{&lt; n-n0 &gt;}_{N}]$</li><li>Circular Time-Reversal Operation(循环反转运算):  $x[{&lt; -n &gt;}_{N}]$</li></ul></li><li>本质：把有限长序列看作是一个周期序列的一个周期，有限长序列运算可以看作是对周期序列运算再取主值周期这样一个过程</li></ol><h2 id="Typical-Sequences-and-Sequence-Representation-典型序列与序列表示"><a href="#Typical-Sequences-and-Sequence-Representation-典型序列与序列表示" class="headerlink" title="Typical Sequences and Sequence Representation(典型序列与序列表示)"></a>Typical Sequences and Sequence Representation(典型序列与序列表示)</h2><ol><li>共轭（*）即对虚部取反</li><li>Conjugate-symmetric sequence(共轭对称序列)：x[n]=x*[-n],即在序列中，距0时刻序列相同距离，实部相同，虚部相反<ul><li>如果x[n]只有实部，x[n]=x[-n],x[n]为even sequence(偶序列)</li></ul></li><li>Conjugate-antisymmetric sequence(共轭反对称序列):x[n]=-x*[-n]，即距0相同距离，实部相反，虚部相同<ul><li>如果x[n]只有实部，x[n]=-x[-n],x[n]为odd sequence(奇序列)</li></ul></li><li>任意序列都能求出其共轭对称部分或共轭反对称部分<script type="math/tex; mode=display">x[n]=x_{cs}[n]+x_{ca}[n]</script><script type="math/tex; mode=display">x_{cs}[n]=\frac{1}{2}(x[n]+x^{*}[-n]) \qquad 共轭对称部分</script><script type="math/tex; mode=display">x_{ca}[n]=\frac{1}{2}(x[n]-x^{*}[-n]) \qquad 共轭反对称部分</script></li><li>基本序列：<ul><li>Unit sample sequence(单位采样序列)：δ(n)</li><li>Unit step sequence(单位阶跃序列)：μ(n)</li><li>正弦序列的周期性：满足 $w_{0}N=2{\pi}r$<ul><li>实正弦序列</li><li>复正弦序列</li></ul></li></ul></li><li>四种频率形式：<br><img src="https://s2.loli.net/2023/02/21/A8GsHcnVMvlUQuq.jpg" alt=""><br><img src="https://s2.loli.net/2023/02/21/LaeWhxKGQqEYDm1.jpg" alt=""></li></ol><h2 id="The-Sampling-Process"><a href="#The-Sampling-Process" class="headerlink" title="The Sampling Process"></a>The Sampling Process</h2><ol><li>两个不同频率的正弦序列，经过采样后产生相同的正弦序列条件：<br>频率(正负频率)相差采样频率整数倍</li></ol>]]></content>
+        <content type="html"><![CDATA[<h2 id="Time-Domain-Representation-时域表示"><a href="#Time-Domain-Representation-时域表示" class="headerlink" title="Time-Domain Representation(时域表示)"></a>Time-Domain Representation(时域表示)</h2><ol><li>序列的时间维度：<ul><li>finite-length sequence(有限长序列):<br>可通过补零(zero-padding)增加序列长度</li><li>infinite-length sequence(无限长序列)：<br>right-sided sequence(右边序列，N &lt; $ N_{1}$,x[n]=0)，causal sequence(因果序列)，two-sided sequence(双边序列，有限个0)</li></ul></li><li>序列的振幅值维度：<ul><li>complex conjugate sequence(复共轭序列)：实部(real parts)相同，虚部(imaginary parts)互为相反数</li></ul></li><li>序列的长度即为数的个数</li></ol><h2 id="Operations-on-Sequences-序列运算"><a href="#Operations-on-Sequences-序列运算" class="headerlink" title="Operations on Sequences(序列运算)"></a>Operations on Sequences(序列运算)</h2><ol><li>不等长序列的基本运算(Elementary  Operations)：补零，并使时间对齐</li><li>Convolution Sum(卷积和)：<script type="math/tex; mode=display">y[n]=x[n]*h[n]=\sum_{k=-\infty}^{\infty}x[k]h[n-k]</script></li><li>两个序列卷积得到的新序列长度为N+M-1</li></ol><h2 id="Operations-on-Finite-Length-Sequences-有限长序列运算"><a href="#Operations-on-Finite-Length-Sequences-有限长序列运算" class="headerlink" title="Operations on Finite-Length Sequences(有限长序列运算)"></a>Operations on Finite-Length Sequences(有限长序列运算)</h2><ol><li>modulo operation(模运算): ${&lt; m &gt;}_{N}$</li><li>对于有限长序列运算，有限长序列的时间范围限定在0≤n≤N-1</li><li>有限长序列运算:<ul><li>Circular Time-shift Operation(循环时移运算)： $x[{&lt; n-n0 &gt;}_{N}]$</li><li>Circular Time-Reversal Operation(循环反转运算):  $x[{&lt; -n &gt;}_{N}]$</li></ul></li><li>本质：把有限长序列看作是一个周期序列的一个周期，有限长序列运算可以看作是对周期序列运算再取主值周期这样一个过程</li></ol><h2 id="Typical-Sequences-and-Sequence-Representation-典型序列与序列表示"><a href="#Typical-Sequences-and-Sequence-Representation-典型序列与序列表示" class="headerlink" title="Typical Sequences and Sequence Representation(典型序列与序列表示)"></a>Typical Sequences and Sequence Representation(典型序列与序列表示)</h2><ol><li>共轭（*）即对虚部取反</li><li>Conjugate-symmetric sequence(共轭对称序列)：x[n]=x*[-n],即在序列中，距0时刻序列相同距离，实部相同，虚部相反<ul><li>如果x[n]只有实部，x[n]=x[-n],x[n]为even sequence(偶序列)</li></ul></li><li>Conjugate-antisymmetric sequence(共轭反对称序列):x[n]=-x*[-n]，即距0相同距离，实部相反，虚部相同<ul><li>如果x[n]只有实部，x[n]=-x[-n],x[n]为odd sequence(奇序列)</li></ul></li><li>任意序列都能求出其共轭对称部分或共轭反对称部分<script type="math/tex; mode=display">x[n]=x_{cs}[n]+x_{ca}[n]</script><script type="math/tex; mode=display">x_{cs}[n]=\frac{1}{2}(x[n]+x^{*}[-n]) \qquad 共轭对称部分</script><script type="math/tex; mode=display">x_{ca}[n]=\frac{1}{2}(x[n]-x^{*}[-n]) \qquad 共轭反对称部分</script></li><li>基本序列：<ul><li>Unit sample sequence(单位采样序列)：δ(n)</li><li>Unit step sequence(单位阶跃序列)：μ(n)</li><li>正弦序列的周期性：满足 $w_{0}N=2{\pi}r$<ul><li>实正弦序列</li><li>复正弦序列</li></ul></li></ul></li><li>四种频率形式：<br><img src="https://s2.loli.net/2023/02/21/A8GsHcnVMvlUQuq.jpg" alt=""><br><img src="https://s2.loli.net/2023/02/21/LaeWhxKGQqEYDm1.jpg" alt=""></li></ol><h2 id="The-Sampling-Process"><a href="#The-Sampling-Process" class="headerlink" title="The Sampling Process"></a>The Sampling Process</h2><ol><li>两个不同频率的正弦序列，经过采样后产生相同的正弦序列条件：<br>频率(正负频率)相差采样频率整数倍</li></ol>]]></content>
       
       
       <categories>
@@ -143,9 +168,9 @@
             
             <tag> Matlab </tag>
             
-            <tag> SPSS </tag>
-            
             <tag> Stata </tag>
+            
+            <tag> SPSS </tag>
             
             <tag> 评价问题 </tag>
             
@@ -199,9 +224,9 @@
       
         <tags>
             
-            <tag> SPSS </tag>
-            
             <tag> 预测问题 </tag>
+            
+            <tag> SPSS </tag>
             
         </tags>
       
@@ -226,9 +251,9 @@
       
         <tags>
             
-            <tag> 分类问题 </tag>
-            
             <tag> Stata </tag>
+            
+            <tag> 分类问题 </tag>
             
         </tags>
       
