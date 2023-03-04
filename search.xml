@@ -33,7 +33,7 @@
       <link href="/posts/8d897bfa.html"/>
       <url>/posts/8d897bfa.html</url>
       
-        <content type="html"><![CDATA[<h2 id="The-Continuous-Time-Fourier-Transform-连续时间的傅里叶变换"><a href="#The-Continuous-Time-Fourier-Transform-连续时间的傅里叶变换" class="headerlink" title="The Continuous-Time Fourier Transform(连续时间的傅里叶变换)"></a>The Continuous-Time Fourier Transform(连续时间的傅里叶变换)</h2><ol><li>傅里叶级数：<ul><li>三角形式傅里叶级数</li><li>指数形式傅里叶级数：通过欧拉公式 $cosnwt=\frac{e^{jnwt}+e^{-jnwt}}{2}$ 由三角形式转换</li></ul></li><li>对于周期信号的频谱，本质是通过指数形式的傅里叶展开，系数为 $F_{n}$ ，是复指数，随nΩ变换<ul><li>从频域(nΩ)的维度来看(Ω为2Π/T),频谱离散,研究的其实是不同的nΩ下, $F_{n}$ 的幅度以及相位</li></ul></li><li>对于非周期信号的频谱，实际是频谱密度函数F(w)= $F_{n}T$，可看作其周期T无限大，Ω趋于0<ul><li>从频域(nΩ)的维度来看,频域连续,研究的F(w)的幅度及相位，傅里叶反变换 (傅里叶积分)，本质上依旧是f(t)的傅里叶指数形式展开，将系数 $F_{n}$转换成 $ \frac{F(w)}{2\pi}dΩ$（因为Ω无限小），求和变为积分</li></ul></li></ol><h2 id="Discrete-Time-Fourier-Transform-离散时间的傅里叶变换"><a href="#Discrete-Time-Fourier-Transform-离散时间的傅里叶变换" class="headerlink" title="Discrete-Time Fourier Transform(离散时间的傅里叶变换)"></a>Discrete-Time Fourier Transform(离散时间的傅里叶变换)</h2><ol><li>变换对：<br><img src="https://s2.loli.net/2023/02/23/Piq2fm7tJQG9R38.jpg" alt=""><br>注意：从CTFT到DTFT，t变成了NT(这里的T是采样周期)，-jΩt变成-jwn，w=ΩT</li><li>相位谱的范围在 $-\pi$ 到 $\pi$</li><li>$X(e^{jw})$ 连续且具有周期性(周期2 $ \pi$)</li><li>x[n]是实数时的重要结论：<ul><li>x[n]为偶函数，傅里叶变换后是实数</li><li>x[n]为奇函数，傅里叶变换后是虚数</li></ul></li><li>不同序列的DTFT:<ul><li>实序列：实部对称，虚部相反，包含复序列的性质</li><li>复序列：除“实部对称，虚部相反”之外</li></ul></li><li>疑问：为什么DTFT的反变换积分区间发生改变，周期性？</li></ol>]]></content>
+        <content type="html"><![CDATA[<h2 id="The-Continuous-Time-Fourier-Transform-连续时间的傅里叶变换"><a href="#The-Continuous-Time-Fourier-Transform-连续时间的傅里叶变换" class="headerlink" title="The Continuous-Time Fourier Transform(连续时间的傅里叶变换)"></a>The Continuous-Time Fourier Transform(连续时间的傅里叶变换)</h2><ol><li>傅里叶级数：<ul><li>三角形式傅里叶级数</li><li>指数形式傅里叶级数：通过欧拉公式 $cosnwt=\frac{e^{jnwt}+e^{-jnwt}}{2}$ 由三角形式转换</li></ul></li><li>对于周期信号的频谱，本质是通过指数形式的傅里叶展开，系数为 $F_{n}$ ，是复指数，随nΩ变换<ul><li>从频域(nΩ)的维度来看(Ω为2Π/T),频谱离散,研究的其实是不同的nΩ下, $F_{n}$ 的幅度以及相位</li></ul></li><li>对于非周期信号的频谱，实际是频谱密度函数F(w)= $F_{n}T$，可看作其周期T无限大，Ω趋于0<ul><li>从频域(nΩ)的维度来看,频域连续,研究的F(w)的幅度及相位，傅里叶反变换 (傅里叶积分)，本质上依旧是f(t)的傅里叶指数形式展开，将系数 $F_{n}$转换成 $ \frac{F(w)}{2\pi}dΩ$（因为Ω无限小），求和变为积分</li></ul></li><li>CTFT：<br><img src="https://s2.loli.net/2023/03/04/l8rmqzwyS3ZNTJd.jpg" alt=""></li></ol><h2 id="Discrete-Time-Fourier-Transform-离散时间的傅里叶变换"><a href="#Discrete-Time-Fourier-Transform-离散时间的傅里叶变换" class="headerlink" title="Discrete-Time Fourier Transform(离散时间的傅里叶变换)"></a>Discrete-Time Fourier Transform(离散时间的傅里叶变换)</h2><ol><li>DTFT：<br><img src="https://s2.loli.net/2023/02/23/Piq2fm7tJQG9R38.jpg" alt=""></li><li>相位谱的范围在 $-\pi$ 到 $\pi$</li><li>$X(e^{jw})$ 连续且具有周期性(周期2 $ \pi$)</li><li>x[n]是实数时的重要结论：<ul><li>x[n]为偶函数，傅里叶变换后是实数</li><li>x[n]为奇函数，傅里叶变换后是虚数</li></ul></li><li>不同序列的DTFT:<ul><li>实序列：实部对称，虚部相反，包含复序列的性质</li><li>复序列：除“实部对称，虚部相反”之外</li></ul></li></ol><h2 id="CTFT与DTFT的关系"><a href="#CTFT与DTFT的关系" class="headerlink" title="CTFT与DTFT的关系"></a>CTFT与DTFT的关系</h2><ol><li>结论：<script type="math/tex; mode=display">G(e^{jw})=\frac{1}{T}\sum_{k=-\infty}^{\infty}G_{a}(j(\Omega-k\Omega_{T}))</script>即对一个连续时间信号f(t)以采样周期T采样得到的离散序列x[n]的DTFT是f(t)的CTFT进行移位，缩放(scale)得到的<br>其中Ω=w/T</li></ol><h2 id="Recovery-of-the-Analog-Signal-模拟信号的恢复"><a href="#Recovery-of-the-Analog-Signal-模拟信号的恢复" class="headerlink" title="Recovery of the Analog Signal(模拟信号的恢复)"></a>Recovery of the Analog Signal(模拟信号的恢复)</h2><p><img src="https://s2.loli.net/2023/03/04/9VKHYo5cjkeqLlP.jpg" alt=""></p><ol><li>Anti-aliasing prefilter(抗混叠前置滤波)<ul><li>作用:避免混叠效应的不利影响</li><li>原理：模拟低通滤波器,截止频率 $\Omega_{T}/2$,通带范围: <script type="math/tex; mode=display">[-\frac{\Omega_{T}}{2}，\frac{\Omega_{T}}{2} ]</script></li></ul></li><li>S/H(采样保持电路)<ul><li>作用：模数转换需要一定的时间，确保A/D的模拟信号幅值恒定</li></ul></li><li>analog-to-digital(A/D,模数转换器)</li><li>digital-to-analog (D/A,数模转换器)</li><li>Reconstruction  fliter(重建滤波器)<ul><li>低通滤波器</li></ul></li><li>采样定理<script type="math/tex; mode=display">\Omega_{T}≥2\Omega_{m}</script>满足采样定理，频谱不混淆，才能正确恢复模拟信号</li></ol>]]></content>
       
       
       <categories>
@@ -191,11 +191,11 @@
       
         <tags>
             
+            <tag> SPSS </tag>
+            
             <tag> Matlab </tag>
             
             <tag> Stata </tag>
-            
-            <tag> SPSS </tag>
             
             <tag> 评价问题 </tag>
             
@@ -249,9 +249,9 @@
       
         <tags>
             
-            <tag> 预测问题 </tag>
-            
             <tag> SPSS </tag>
+            
+            <tag> 预测问题 </tag>
             
         </tags>
       
@@ -276,9 +276,9 @@
       
         <tags>
             
-            <tag> Stata </tag>
-            
             <tag> 分类问题 </tag>
+            
+            <tag> Stata </tag>
             
         </tags>
       
