@@ -4,11 +4,49 @@
   
     
     <entry>
+      <title>Discrete-Time System</title>
+      <link href="/posts/ed4cb526.html"/>
+      <url>/posts/ed4cb526.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="Discrete-Time-System-Examples"><a href="#Discrete-Time-System-Examples" class="headerlink" title="Discrete-Time System Examples"></a>Discrete-Time System Examples</h2><ol><li>累加器(Accumulator):y[n]=y[n-1]+x[n]<ul><li>作用：将当前以及当前时刻之前的所有输入样本进行累加，可视为连续时间积分器的离散时间等效<br><img src="https://s2.loli.net/2023/03/05/CXSc7AnVeODJhg8.jpg" alt=""></li></ul></li><li>滑动平均滤波器(Moving-Average Filter)<br><img src="https://s2.loli.net/2023/03/05/ryPnV78BWUit1bZ.jpg" alt=""><ul><li>作用：用于平滑数据中的随机变化，去除随机噪声</li><li>局限性：适用随机波动变化快的噪声，信号要没有剧烈随机波动，否则不但滤除了噪声也滤除了信号</li></ul></li><li>线性内插器 (Linear Interpolation)<ul><li>作用：用于估计离散时间序列中相邻的一对样本值之间的样本值大小</li><li>因子为4的内插：<br><img src="https://s2.loli.net/2023/03/05/Abj9nQMEPqdx3Ho.jpg" alt=""></li></ul></li><li>中值滤波器(Median Filter)<ul><li>原理：通过在输入序列{x[n]}上滑动一个长度为奇数的窗口来实现的，每次滑动一个样本值。在任一时刻，滤波器的输出都为当前窗口中所有输入样本值的中值</li><li>作用：常用于去除加性随机冲激噪声，这类噪声将会导致受干扰信号中存在大量突发错误</li></ul></li></ol><h2 id="Classification-of-Discrete-Time-Systems"><a href="#Classification-of-Discrete-Time-Systems" class="headerlink" title="Classification of Discrete-Time Systems"></a>Classification of Discrete-Time Systems</h2><ol><li>Linear System</li><li>Shift-Invariant System<ul><li>证明步骤：<ul><li>输入延迟x[n-n0]</li><li>延迟后的输入进入系统得到延迟输出 $y_{D}[n]$</li><li>输出延迟y[n-n0]</li><li>验证 $y_{D}[n]$ 是否等于y[n-n0] </li></ul></li></ul></li><li>Linear Shift-Invariant System</li><li>Causal System:输出的变化不先于输入的变化<ul><li>注意：在数字系统中非因果系统是可以实现的，可以将非因果(noncausal)系统转化为因果系统实现，因果系统的输出相当于非因果系统的输出延迟，模拟系统不可以实现非因果系统</li></ul></li><li>Stable System:输入有界，输出有界</li><li>passive and lossless system(无源与无损系统):<ul><li>无源离散时间系统:对每个具有有限能量的输入序列x[n]，输出序列y[n]的能量不超过输入的能量</li><li>无损系统:输出序列y[n]的能量等于输入的能量</li></ul></li></ol><h2 id="Impulse-and-Step-Responses"><a href="#Impulse-and-Step-Responses" class="headerlink" title="Impulse and Step Responses"></a>Impulse and Step Responses</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> DSP </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 坐牢 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>崩坏3</title>
+      <link href="/posts/27398571.html"/>
+      <url>/posts/27398571.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="毕业旅行"><a href="#毕业旅行" class="headerlink" title="毕业旅行"></a>毕业旅行</h2><details class="folding-tag" blue><summary> 毕业旅行 </summary>              <div class='content'>              <div align=center class="aspect-ratio">    <iframe src="https://player.bilibili.com/player.html?aid=437800204&&page=1&as_wide=1&high_quality=1&danmaku=0"     scrolling="no"     border="0"     frameborder="no"     framespacing="0"     high_quality=1    danmaku=1     allowfullscreen="true">     </iframe></div>              </div>            </details><h2 id="感慨"><a href="#感慨" class="headerlink" title="感慨"></a>感慨</h2><p>刚看完主线终章，算是一次深刻的回忆。尽管我入坑只有不到一年，更多的只是看客，没有多么深刻的羁绊，但其中的一些片段，依旧让我留恋。最后一刻，薪炎永燃，阿波卡利斯如是说，因你而在的故事。。。姬子，爱莉希雅，凯文，御三家。。。也许最后的故事没有多么的特别，但也没必要多么特别，这仅仅是关于传承的故事，打破人类的命运，仅此而已。。。<br>故事的旋律贯彻出一种无奈，对终焉的无奈。也许，若有独断万古的力量，世间规则又怎敢加诸我身？<br>当然，现实中的我终究是渺小的。“鸟儿为什么会飞？”，“飞翔是为了坠落”，供后人践踏，飞的更高。“承自往昔，跨越现在，直至未来”。<br>至此，她们的故事结束了，接下来，是我的故事。。。<br><div class="fj-gallery"><p><img src="https://s2.loli.net/2023/03/05/imlRhLoaGfUeyVN.jpg" alt=""><br><img src="https://s2.loli.net/2023/03/05/AOMNh5x7HZXlctd.webp" alt=""><br><img src="https://s2.loli.net/2023/03/05/Z3bJLEhmqsUY1zB.jpg" alt=""><br><img src="https://s2.loli.net/2023/03/05/A7tNjoH3IQwS1Fg.jpg" alt=""></p>          </div></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>微型计算机原理与接口技术</title>
       <link href="/posts/c5ff8811.html"/>
       <url>/posts/c5ff8811.html</url>
       
-        <content type="html"><![CDATA[<h2 id="计算机基础"><a href="#计算机基础" class="headerlink" title="计算机基础"></a>计算机基础</h2><details class="folding-tag" blue><summary> 详解 </summary>              <div class='content'>              <ol><li>思维导图：<br><img src="https://s2.loli.net/2023/02/26/WAZQluBMK1xPpOL.png" alt="微型计算机原理与接口技术1.png"><br>详情见：<a href="https://www.kdocs.cn/view/l/clmNbouXPIHH?from=docs">https://www.kdocs.cn/view/l/clmNbouXPIHH?from=docs</a></li></ol>              </div>            </details><h2 id="80X86微处理器"><a href="#80X86微处理器" class="headerlink" title="80X86微处理器"></a>80X86微处理器</h2><details class="folding-tag" blue><summary> 详解 </summary>              <div class='content'>              <ol><li>思维导图：<br><img src="https://s2.loli.net/2023/02/26/5tQ3WusDSgeM2c8.png" alt="微型计算机原理与接口技术2.png"><br>详情见： <a href="https://www.kdocs.cn/view/l/csn0njL3lUpk?from=docs">https://www.kdocs.cn/view/l/csn0njL3lUpk?from=docs</a></li></ol>              </div>            </details>]]></content>
+        <content type="html"><![CDATA[<h2 id="计算机基础"><a href="#计算机基础" class="headerlink" title="计算机基础"></a>计算机基础</h2><details class="folding-tag" blue><summary> 详解 </summary>              <div class='content'>              <ol><li>思维导图：<br><img src="https://s2.loli.net/2023/02/26/WAZQluBMK1xPpOL.png" alt="微型计算机原理与接口技术1.png"><br>详情见：<a href="https://www.kdocs.cn/view/l/clmNbouXPIHH?from=docs">https://www.kdocs.cn/view/l/clmNbouXPIHH?from=docs</a></li></ol>              </div>            </details><h2 id="80X86微处理器"><a href="#80X86微处理器" class="headerlink" title="80X86微处理器"></a>80X86微处理器</h2><details class="folding-tag" blue><summary> 详解 </summary>              <div class='content'>              <ol><li>思维导图：<br><img src="https://s2.loli.net/2023/02/26/5tQ3WusDSgeM2c8.png" alt="微型计算机原理与接口技术2.png"><br>详情见: <a href="https://www.kdocs.cn/view/l/csn0njL3lUpk?from=docs">https://www.kdocs.cn/view/l/csn0njL3lUpk?from=docs</a></li></ol>              </div>            </details><h2 id="指令系统"><a href="#指令系统" class="headerlink" title="指令系统"></a>指令系统</h2><details class="folding-tag" blue><summary> 详解 </summary>              <div class='content'>              <ol><li>思维导图<br><img src="https://s2.loli.net/2023/03/05/nQRaz6mSJDHiKA8.png" alt="微型计算机原理与接口技术3.png"><br>详情见: <a href="https://www.kdocs.cn/view/l/ciIsqRmSbCbN?from=pwa">https://www.kdocs.cn/view/l/ciIsqRmSbCbN?from=pwa</a></li></ol>              </div>            </details>]]></content>
       
       
       <categories>
@@ -191,9 +229,9 @@
       
         <tags>
             
-            <tag> SPSS </tag>
-            
             <tag> Matlab </tag>
+            
+            <tag> SPSS </tag>
             
             <tag> Stata </tag>
             
