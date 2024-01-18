@@ -1,0 +1,417 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>通信原理 | ℒのℬ𝓁ℴℊ</title><meta name="author" content="ℒ"><meta name="copyright" content="ℒ"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="通原知识点">
+<meta property="og:type" content="article">
+<meta property="og:title" content="通信原理">
+<meta property="og:url" content="https://www.oristar.top/posts/f21a0185.html">
+<meta property="og:site_name" content="ℒのℬ𝓁ℴℊ">
+<meta property="og:description" content="通原知识点">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.loli.net/2023/09/07/27yk3jErK1cYhX4.webp">
+<meta property="article:published_time" content="2023-09-07T08:52:48.000Z">
+<meta property="article:modified_time" content="2023-12-09T11:49:12.858Z">
+<meta property="article:author" content="ℒ">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2023/09/07/27yk3jErK1cYhX4.webp"><link rel="shortcut icon" href="https://s2.loli.net/2023/01/10/XciUPsnFZV41CxL.jpg"><link rel="canonical" href="https://www.oristar.top/posts/f21a0185"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/node-snackbar/0.1.16/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.staticfile.org/fancyapps-ui/4.0.31/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":230},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#6C6C6C","bgDark":"#1f1f1f","position":"top-right"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdnjs.cloudflare.com/ajax/libs/flickr-justified-gallery/2.1.2/fjGallery.min.js',
+      css: 'https://cdnjs.cloudflare.com/ajax/libs/flickr-justified-gallery/2.1.2/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '通信原理',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-12-09 19:49:12'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const now = new Date()
+          const hour = now.getHours()
+          const isNight = hour <= 6 || hour >= 18
+          if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+          else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><div id="myscoll"></div><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/animate.min.css" media="print" onload="this.media='screen'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><div class="loading-img"></div><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="/css/progress_bar.css"/><script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js"></script><div id="web_bg"><style>#web_bg{
+  background: url(https://s2.loli.net/2023/01/10/14RtGdEKsBLZ57m.jpg) !important;
+  background-attachment: local!important;
+  background-position: center!important;
+  background-size: cover!important;
+  background-repeat: no-repeat!important;
+}
+[data-theme="dark"]
+  #web_bg{
+    background: url(https://s2.loli.net/2023/03/08/uwaHI98BYmZPr3f.jpg) !important;
+    background-attachment: local!important;
+    background-position: center!important;
+    background-size: cover!important;
+    background-repeat: no-repeat!important;
+  }    
+</style></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/08/26/FipKABTCD3eLcMn.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">14</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">7</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-clone"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-cannabis"></i><span> 社交</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友人帐</span></a></li><li><a class="site-page child" href="/collect/"><i class="fa-fw fas fa-coffee"></i><span> 休闲</span></a></li><li><a class="site-page child" href="/comments/"><i class="fa-fw fas fa-envelope-open"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-user"></i><span> 个人</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/book/"><i class="fa-fw fas fa-comment"></i><span> 唠叨</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw fas fa-photo-video"></i><span> 相册</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fab fa-sketch"></i><span> 关于</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://s2.loli.net/2023/09/07/27yk3jErK1cYhX4.webp')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">ℒのℬ𝓁ℴℊ</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-clone"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-cannabis"></i><span> 社交</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友人帐</span></a></li><li><a class="site-page child" href="/collect/"><i class="fa-fw fas fa-coffee"></i><span> 休闲</span></a></li><li><a class="site-page child" href="/comments/"><i class="fa-fw fas fa-envelope-open"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-user"></i><span> 个人</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/book/"><i class="fa-fw fas fa-comment"></i><span> 唠叨</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw fas fa-photo-video"></i><span> 相册</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fab fa-sketch"></i><span> 关于</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">通信原理</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-09-07T08:52:48.000Z" title="发表于 2023-09-07 16:52:48">2023-09-07</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-12-09T11:49:12.858Z" title="更新于 2023-12-09 19:49:12">2023-12-09</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E9%80%9A%E4%BF%A1/">通信</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">3191</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>10分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="通信原理"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h2><details class="folding-tag" grey><summary> 详解 </summary>
+              <div class='content'>
+              <h3 id="通信系统组成框图中各部分的作用"><a href="#通信系统组成框图中各部分的作用" class="headerlink" title="通信系统组成框图中各部分的作用"></a>通信系统组成框图中各部分的作用</h3><ol><li>信源编码<ul><li>压缩冗余度，提高信息传输的有效性</li><li>完成A/D转换</li></ul></li><li>信道编码<ul><li>增加冗余度，纠正错码，提高通信系统的可靠性</li></ul></li><li>调制：把基带信号（频谱从零频附近开始的低频信号）的频谱搬移到高频处，形成适合在信道中传输的带通信号（高频谱）<br>调幅波——检波（解调）<br>调频波——鉴频（解调）<br>作用：<ul><li>便于器件小型化</li><li>实现多路同频信号的同时传输，提高信道利用率</li><li>回避干扰信号，减少系统干扰</li></ul></li></ol><h3 id="数字通信的特点"><a href="#数字通信的特点" class="headerlink" title="数字通信的特点"></a>数字通信的特点</h3><p>优点：</p><ul><li>抗干扰能力强，且噪声不积累</li><li>通过信道编码技术使传输差错可控</li><li>便于处理，变换，存储</li><li>灵活，将来自不同信源的信号综合到一起传输</li><li>易于集成，加密</li></ul><p>缺点：</p><ul><li>需要较大的传输带宽（采样定理，8位，模拟电话4kHz带宽，数字电话4x2x8=64kHz带宽）</li><li>对同步要求高</li></ul><h3 id="符号平均信息量（信源熵）的计算"><a href="#符号平均信息量（信源熵）的计算" class="headerlink" title="符号平均信息量（信源熵）的计算"></a>符号平均信息量（信源熵）的计算</h3><script type="math/tex; mode=display">H(x)=-\sum_{i=1}^{M} P(x_{i} )\lg_{2}{P(x_{i})} (b/符号)</script><ul><li>等概时，信源熵最大</li></ul><h3 id="通信系统可靠性和有效性指标"><a href="#通信系统可靠性和有效性指标" class="headerlink" title="通信系统可靠性和有效性指标"></a>通信系统可靠性和有效性指标</h3><div class="note info flat"><p>有效性：传输一定信息量所占用的频带宽度，及频带利用率<br>可靠性：传输信息的准确程度</p></div><h4 id="模拟通信系统"><a href="#模拟通信系统" class="headerlink" title="模拟通信系统"></a>模拟通信系统</h4><ol><li>有效性：传输带宽越小，频带利用率越高，有效性越好，调幅信号的有效性比调频好</li><li>可靠性：信噪比（S/N，输出信号与噪声功率比，越高抗噪能力越强）,调频信号的信噪比比调幅的高</li></ol><h4 id="数字通信系统"><a href="#数字通信系统" class="headerlink" title="数字通信系统"></a>数字通信系统</h4><p>$R_{B}$ :码元（符号）传输速率，单位Baud(波特，符号/s),每秒传输码元的数目</p><p>$T_{B}$ :单个码元的长度（持续时间）</p><p>B ：系统带宽</p><p>$R_{b}$ :信息传输速率（传信率，比特率），每秒传输的平均信息量，单位b/s(bps,二进制)</p><script type="math/tex; mode=display">R_{b}=R_{B}\cdot H</script><p>等概时：</p><script type="math/tex; mode=display">R_{b}=R_{B}\log_{2}{M}</script><ol><li>有效性：单位带宽（每赫）内的传输速率（频带利用率）<script type="math/tex; mode=display">\eta =\frac{R_{B} }{B} （Baud/Hz）</script><script type="math/tex; mode=display">\eta_{b} =\frac{R_{b} }{B} (b/(s\cdot Hz))</script></li><li><p>可靠性：差错概率，用误码率，误信率表示<br>误码率：<script type="math/tex">P_{e}=\frac{错误码元数}{传输总码元数}</script><br>误信率：<script type="math/tex">P_{b}=\frac{错误比特数}{传输总比特数}</script></p><p>误信率小于等于误码率</p></li></ol>
+              </div>
+            </details>
+<h2 id="随机过程"><a href="#随机过程" class="headerlink" title="随机过程"></a>随机过程</h2><details class="folding-tag" grey><summary> 详解 </summary>
+              <div class='content'>
+              <h3 id="广义平稳随机过程的判定规则"><a href="#广义平稳随机过程的判定规则" class="headerlink" title="广义平稳随机过程的判定规则"></a>广义平稳随机过程的判定规则</h3><ol><li>均值与t无关，为常数</li><li>自相关函数只与时间间隔有关</li></ol><h3 id="各态历经性"><a href="#各态历经性" class="headerlink" title="各态历经性"></a>各态历经性</h3><ol><li>定义：统计平均等于时间平均</li><li>具有各态历经性的随机过程一定是平稳过程，反之不成立。在通信系统中，随机信号和噪声满足各态历经性</li></ol><h3 id="平稳过程自相关函数的性质"><a href="#平稳过程自相关函数的性质" class="headerlink" title="平稳过程自相关函数的性质"></a>平稳过程自相关函数的性质</h3><ol><li>R(0)（随机过程平方的均值）：时域计算的总功率（某个时刻点所有的功率之和），信号的平均功率</li><li>R(∞)（随机过程均值的平方）：信号的直流功率</li><li>R(0)－R(∞)：信号的交流功率，等于方差</li></ol><h3 id="维纳——辛钦定理"><a href="#维纳——辛钦定理" class="headerlink" title="维纳——辛钦定理"></a>维纳——辛钦定理</h3><ol><li>内容：平稳过程的功率谱密度P（f）与其自相关函数R(τ)是傅里叶变换对</li><li>对 P(f)积分，得到平稳过程的平均功率R(0)</li></ol><h3 id="高斯（正态）随机过程"><a href="#高斯（正态）随机过程" class="headerlink" title="高斯（正态）随机过程"></a>高斯（正态）随机过程</h3><ol><li><p>性质</p><ul><li>若为广义平稳，则也为严平稳</li><li>高斯过程经过线性变换后生成的过程仍是高斯过程。因此，若线性系统的输入为高斯过程，则系统输出也是高斯过程</li></ul></li><li><p>高斯随机变量</p></li></ol><script type="math/tex; mode=display">f(x)=\frac{1}{\sqrt{2\pi }\sigma  } e^{-\frac{(x-a )^{2} }{2\sigma ^{2} } }</script><ol><li><p>正态分布函数 </p><ul><li>定义：正态分布的概率密度f(x)的积分，用于通信系统的性能分析<script type="math/tex; mode=display">F(x)=P(\xi \le x )=1-\frac{1}{2} erfc(\frac{x-a}{\sqrt{2} \sigma } )</script><script type="math/tex; mode=display">互补误差函数：erfc(x)=1-erf(x)=\frac{2}{\sqrt{\pi } }  \int_{x}^{\infty } e^{-t^{2} } dt</script></li></ul></li><li><p>重要结论 ：输出过程的功率谱密度是输入过程的功率谱密度乘以系统频率响应模值的平方</p></li></ol><h3 id="窄带随机过程"><a href="#窄带随机过程" class="headerlink" title="窄带随机过程"></a>窄带随机过程</h3><ol><li><p>定义 ：</p><ul><li>$\bigtriangleup f\ll f_{c}(中心频率) $</li><li>$f_{c}$ 远离零频率</li></ul></li><li><p>结论：一个均值为零的窄带平稳高斯过程，它的同相分量和正交分量同样是平稳高斯过程，而且均值为零，方差相同。包络是瑞利分布，相位是均匀分布</p></li></ol><h3 id="正弦波加窄带高斯噪声"><a href="#正弦波加窄带高斯噪声" class="headerlink" title="正弦波加窄带高斯噪声"></a>正弦波加窄带高斯噪声</h3><p>&emsp;包络分布与信噪比有关：</p><ul><li>小信噪比，瑞利分布</li><li>大信噪比，高斯分布</li><li>一般情况，莱斯分布</li></ul><h3 id="高斯白噪声"><a href="#高斯白噪声" class="headerlink" title="高斯白噪声"></a>高斯白噪声</h3><p>高斯白噪声概率密度服从正态分布，功率谱密度服从均匀分布</p>
+              </div>
+            </details>
+<h2 id="信道"><a href="#信道" class="headerlink" title="信道"></a>信道</h2><details class="folding-tag" grey><summary> 详解 </summary>
+              <div class='content'>
+              <h3 id="信道的分类"><a href="#信道的分类" class="headerlink" title="信道的分类"></a>信道的分类</h3><ol><li><p>无线信道：利用电磁波在空间传播</p><ul><li>地波传播：频率较低（2MHz以下） ，有绕射能力</li><li>天波传播：频率较高（2MHz~30MHz）,利用电离层反射</li><li>视线传播：频率高于30MHz，穿透电离层<br>$h\approx \frac{D^{2} }{50} (m)$<br>h:收发天线高度<br>D:收发天线间距离</li></ul></li><li><p>有线信道：</p><ul><li>明线</li><li>对称电缆</li><li>同轴电缆</li></ul></li><li><p>调制信道模型：在研究调制系统时信道指调制信道，叠加有噪声的线性时变/时不变网络</p><ul><li>恒参信道：特性基本不随时间变化，非时变线性网络</li><li>随参信道：特性随时间随机变化</li></ul></li><li><p>编码信道模型：讨论信道编码时，信道表示编码信道，用转移概率来描述</p></li></ol><h3 id="恒参信道"><a href="#恒参信道" class="headerlink" title="恒参信道"></a>恒参信道</h3><ol><li>种类：<ul><li>有线信道</li><li>无线电中继和卫星通信等视线传播信道</li></ul></li><li><p>传输特性：</p><ul><li>幅频特性 |H（w）|</li><li>相频特性 φ（w）</li></ul></li><li><p>无失真传输：</p><ul><li>|H（w）|=K（常数）<br>若不等为幅频失真，是线性失真，可用线性网络进行补偿（线性网络的频率特性与信道频率特性之和 ，在信号频谱占用的频带内为一条水平直线）</li><li>φ（w）=wtd<br>若不等为相频失真，是线性失真，可用线性网络进行补偿</li></ul></li><li><p>幅频失真影响</p><ul><li>模拟信号：造成波形失真，信噪比下降</li><li>数字信号：产生码间串扰，误码率增大</li></ul></li><li><p>相频失真影响</p><ul><li>语音信号影响不大，视频信号影响大</li><li>数字信号：码间串扰，误码率增大</li></ul></li></ol><h3 id="随参信道"><a href="#随参信道" class="headerlink" title="随参信道"></a>随参信道</h3><ol><li>特性：<ul><li>衰减随时间变化</li><li>时延随时间变化</li><li>多径传播（信号经过几条路径到达接收端，且每条路径的时延和衰减随时间变化）</li></ul></li></ol><h3 id="多径效应"><a href="#多径效应" class="headerlink" title="多径效应"></a>多径效应</h3><ol><li>定义：多径传播对信号的影响</li><li>影响：<ul><li>瑞利型衰落（包络瑞利分布），快衰落</li><li>两径，波形的包络对应频谱中，频率弥散</li><li>多径，频率选择性衰落</li></ul></li></ol><h3 id="避免频率选择性衰落"><a href="#避免频率选择性衰落" class="headerlink" title="避免频率选择性衰落"></a>避免频率选择性衰落</h3><ol><li>信道相关带宽：相邻传输零点的频率间隔<script type="math/tex; mode=display">\bigtriangleup f=\frac{1}{\tau }</script></li><li><p>信道带宽：$B_{s}$<br>工程经验：</p><script type="math/tex; mode=display">B_{s}=(\frac{1}{3}\sim \frac{1}{5}  )\bigtriangleup f</script></li><li><p>数字信号的码元宽度(持续时间)：</p><script type="math/tex; mode=display">T_{s}=（3\sim  5 \tau）</script></li></ol><h3 id="信道容量"><a href="#信道容量" class="headerlink" title="信道容量"></a>信道容量</h3><ol><li>定义：信道能够无差错传输的最大平均信息速率</li><li>离散信道容量：信源发送的平均信息量(H(x),等概)-因信道噪声而损失的平均信息量</li><li>连续信道容量<script type="math/tex; mode=display">C=B\log_{2}{(1+\frac{S}{N} )} =B\log_{2}{(1+\frac{S}{n_{0}B } )}(b/s)</script><ul><li>S － 信号平均功率（W）；B － 带宽（Hz）<br>n0 －噪声单边功率谱密度；N = n0B －噪声功率（W）<br>结论：当带宽B趋于无穷大时，信道容量不趋于无穷大，而是趋于一个定值</li></ul></li></ol>
+              </div>
+            </details>
+<h2 id="模拟调制系统"><a href="#模拟调制系统" class="headerlink" title="模拟调制系统"></a>模拟调制系统</h2><details class="folding-tag" grey><summary> 详解 </summary>
+              <div class='content'>
+              <h3 id="名词解释"><a href="#名词解释" class="headerlink" title="名词解释"></a>名词解释</h3><ol><li><p>输出信噪比：<script type="math/tex">\frac{S_{0}}{N_{0}}=\frac{解调器输出有用信号的平均功率}{解调器输出噪声的平均功率}</script></p></li><li><p>输入信噪比：<script type="math/tex">\frac{S_{i}}{N_{i}}</script></p></li><li><p>制度增益（信噪比增益）G:</p><script type="math/tex; mode=display">G=\frac{S_{0}/N_{0}}{S_{i}/N_{i}}</script></li><li><p>信道损耗：</p><script type="math/tex; mode=display">\alpha =10\log_{10}{\frac{S_{T}}{S_{i}} }</script><p><script type="math/tex">S_{T}</script> :发射信号功率<br><script type="math/tex">S_{i}</script> :解调器输入信号功率</p></li></ol><h3 id="调制"><a href="#调制" class="headerlink" title="调制"></a>调制</h3><ol><li><p>目的:</p><ul><li>进行频谱搬移，匹配信道特性，减小天线尺寸</li><li>实现多路复用，提高信道利用率</li><li>改善系统性能（有效性、可靠性）</li><li>实现频率分配</li></ul></li><li><p>载波<br>$ c(t)=A\cos (w_{c}t+ \varphi)  $</p></li><li><p>带宽B：看频谱正半轴</p></li><li>功率：看正负半轴</li></ol><h3 id="线性调制系统的抗噪声性能"><a href="#线性调制系统的抗噪声性能" class="headerlink" title="线性调制系统的抗噪声性能"></a>线性调制系统的抗噪声性能</h3><ol><li>性能好坏：<ul><li>同类调制系统，制度增益越大，解调器抗噪声性能越好</li><li>已调信号平均功率相同，信道噪声功率谱密度相同，输出信噪比越大，抗噪声性能越好</li></ul></li><li>模型：已调信号加信道加性高斯白噪声通过<strong>带通滤波器（BPF）</strong>得到已调信号和窄带高斯噪声通过解调器(乘相干载波再通过低通滤波器（LPF）)得到有用信号和噪声</li><li><p>窄带高斯噪声:<br>可用同相分量与正交分量表示:<script type="math/tex">n_{i}(t)=n_{c}(t)\cos w_{c}t - n_{s}(t)\sin w_{c}t</script><br>功率：<script type="math/tex">N_{i}=n_{0}B</script>(带通滤波器高度为1，带宽为B)</p><ul><li>经过相干解调后，正交分量被抑制，<script type="math/tex">n_{0}(t)=\frac{1}{2}n_{c}(t)</script>,功率：<script type="math/tex">N_{0}=\frac{1}{4}n_{0}B</script></li></ul></li><li><p>在相同的Si，n0。fH条件下,DSB,SSB的输出信噪比相等，抗噪声性能相同</p></li></ol><h3 id="非线性调制（角度调制）"><a href="#非线性调制（角度调制）" class="headerlink" title="非线性调制（角度调制）"></a>非线性调制（角度调制）</h3><ol><li>定义：载波的频谱结构发生改变</li><li>优势：抗噪声性能优于幅度调制</li><li>表达式：<script type="math/tex">s_{m}(t)=A\cos [w_{c}t+\varphi (t)]</script></li><li><p>分类：</p><ul><li>FM（调频）:<script type="math/tex">s_{FM}(t)=A\cos [w_{c}t+K_{f}\int m(\tau)d \tau ]</script></li><li>PM（调相）:<script type="math/tex">s_{PM}(t)=A\cos [w_{c}t+K_{p}m(t)]</script></li></ul></li><li><p>角度调制本质就是改变<script type="math/tex">K_{f},K_{p}</script></p></li></ol><h4 id="FM"><a href="#FM" class="headerlink" title="FM"></a>FM</h4><ol><li><p>分类：</p><ul><li>窄带调频（NBFM）：最大瞬时相位偏移<script type="math/tex">\left | K_{f}\int m(\tau)d \tau \right | \ll \frac{\pi }{6} （或0.5)</script><br>最大频偏较小,占据带宽较窄，抗噪声性能（可靠性）比AM好</li><li>宽带调频（WBFM）</li></ul></li><li><p>对于单音调频FM<br>调制信号：<script type="math/tex">m(t)=A_{m}\cos w_{m}t</script><br>已调信号表达式：<script type="math/tex">s_{FM}(t)=A\cos [w_{c}t+K_{f}A_{m}\int \cos w_{m}\tau d\tau ]=A\cos [w_{c}t+m_{f}\sin w_{m}t]</script></p><ul><li><script type="math/tex">m_{f}</script>：调频指数(最大相位偏移)</li><li><script type="math/tex; mode=display">m_{f}=\frac{K_{f}A_{m}  }{\omega _{m} } =\frac{\bigtriangleup \omega }{\omega _{m} } =\frac{\bigtriangleup f}{f_{m} }</script></li><li><script type="math/tex">\bigtriangleup \omega =K_{f}A_{m}</script>：最大角频偏</li><li><script type="math/tex">\bigtriangleup f</script>：最大频偏</li></ul></li><li><p>带宽：对于多音或 任意带限信号调制时的调频信号带宽用卡森公式估算</p><script type="math/tex; mode=display">B_{FM}=2(m_{f}+1)f_{m}=2(\bigtriangleup f+f_{m})</script></li><li><p>功率：平均功率等于未调载波的平均功率，分配给边频分量的比例与调频指数有关</p></li><li><p>解调：</p><ul><li>非相干解调:<script type="math/tex">m_{0}（t）=K_{d} K_{f}m(t)</script><br><script type="math/tex">K_{d}</script>:鉴频器灵敏度</li><li>相干解调：只适用NBFM</li></ul></li></ol><h3 id="调频系统的抗噪声性能分析"><a href="#调频系统的抗噪声性能分析" class="headerlink" title="调频系统的抗噪声性能分析"></a>调频系统的抗噪声性能分析</h3><h4 id="大信噪比"><a href="#大信噪比" class="headerlink" title="大信噪比"></a>大信噪比</h4><ol><li>制度增益：<script type="math/tex">G_{FM}=3m_{f}^2(m_{f}+1)</script></li><li>输入信噪比： <script type="math/tex">\frac{\frac{A^{2} }{2} }{n_{0} B_{FM} }</script></li><li><script type="math/tex; mode=display">B_{FM}=2(m_{f}+1)f_{m}</script></li></ol><h3 id="门限效应"><a href="#门限效应" class="headerlink" title="门限效应"></a>门限效应</h3><p>输入信噪比下降，输出信噪比急剧恶化</p><h3 id="解调"><a href="#解调" class="headerlink" title="解调"></a>解调</h3><ol><li>相干解调：用到与发射端同频同相载波<ul><li>适用：AM、DSB、SSB、VSB</li><li>特点：无门限效应</li><li>要求：载波同步(同频同相)</li></ul></li><li>非相干解调（包络检波）：未用到与发射端同频同相载波<ul><li>适用：AM(小信噪比存在门限效应)</li><li>要求：<script type="math/tex">\left | m(t) \right |_{max} \le A_{0}</script></li></ul></li></ol><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ol><li>抗噪声性能（可靠性）：FM最好，DSB/SSB、 VSB次之，AM最差</li><li>频谱利用率（有效性）：SSB最高，VSB较高，DSB/AM次之，FM最差；</li><li>功率利用率：FM最高，DSB/SSB、VSB次之，AM最差；</li><li>设备复杂度：AM最简，DSB/ FM次之，VSB较复杂， SSB最复杂</li></ol>
+              </div>
+            </details>
+<h2 id="数字基带传输系统"><a href="#数字基带传输系统" class="headerlink" title="数字基带传输系统"></a>数字基带传输系统</h2><details class="folding-tag" grey><summary> 详解 </summary>
+              <div class='content'>
+              <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><ol><li>数字基带信号：数字信号的频谱从零频或很低频开始</li><li>数字基带传输系统：基带信号不经过载波调制而直接进行传输</li><li>数字基带传输研究意义：<ul><li>近程数据通信系统广泛采用</li><li>基带包含带通系统的诸多基本问题</li><li>带通传输系统可等效成基带传输系统研究</li></ul></li><li>第一零点带宽（基带信号带宽）:<script type="math/tex">B=\frac{1}{\tau }</script></li><li>有直流分量：信号时域平均值不为零</li><li>归零（RZ）波形：有电脉冲宽度小于码元宽度，<script type="math/tex">\frac{\tau}{T_{B}}<1</script><ul><li>可直接提取位定时信号</li><li>占据更多带宽</li></ul></li><li>序列的带宽等于信号的带宽</li><li>差分波形：<ul><li>传号差分，0不变，1变</li><li>空号差分，0变，1不变</li></ul></li></ol><h3 id="基带信号的频谱特性"><a href="#基带信号的频谱特性" class="headerlink" title="基带信号的频谱特性"></a>基带信号的频谱特性</h3><ol><li>基带信号分解<ul><li>时域：<script type="math/tex">s(t)=v(t)(稳态波)+u(t)（交变波）</script></li><li>频域（功率谱密度）：<script type="math/tex">P_{s}(f)=P_{v}(f)+P_{u}(f)</script></li></ul></li><li>稳态波<ul><li>定义：随机序列s（t）的统计平均分量（二进制基带信号即为两种波形的叠加），在每个码元内波形相同，是周期信号，周期为<script type="math/tex">T_{B}</script></li><li>功率谱：离散谱（若<script type="math/tex">v(t)=0</script>,则其离散谱不存在）<ul><li>m=0存在，有直流分量</li><li>m=1存在，即频谱在<script type="math/tex">f=f_{B}(T_{B}为码元宽度)</script>有冲激响应，有定时分量</li><li>单极性NRZ信号不存在定时分量</li><li>单极性归零波形有定时分量</li><li>双极性等概波形无直流分量，无定时分量</li></ul></li></ul></li><li>交变波：<ul><li>功率谱：连续谱，可以确定随机序列的带宽，总是存在</li></ul></li></ol><h3 id="基带传输的常用码型"><a href="#基带传输的常用码型" class="headerlink" title="基带传输的常用码型"></a>基带传输的常用码型</h3><ol><li><p>码型选择原则</p><ul><li>无直流分量，且低频分量小</li><li>定时信息丰富</li><li>高频分量小</li><li>不受信源统计特性的影响，适应信息源的变化</li><li>有自检能力</li><li>编、译码简单</li></ul></li><li><p>AMI：含义：传号交替反转码，1（传号）交替变化为+1，-1，0（空号）保持不变</p></li><li><p>HDB3码编码：</p><ul><li>连“0”个数不超过3个时，遵循AMI的编码规则</li><li>连“0”个数超过3个时，将第4个“0”改为非“0”脉冲，记为V+或V-，称为破坏脉冲</li><li>相邻V码的极性必须交替出现（确保无直流）</li><li>V码的极性应与前一个非“0”脉冲的极性相同，否则将0000更改为B+00V+ 或 B-00V- 。B称为调节脉冲</li><li>V码之后的传号码极性也要交替</li></ul></li><li><p>HDB3码译码：检查破坏脉冲，找到V码，把V码及前3位标成0000，之后把其他非零码还原成1，0还原为0</p></li><li>CMI码：传号反转码，1为11，00交替，0为01</li></ol><h3 id="数字基带信号传输"><a href="#数字基带信号传输" class="headerlink" title="数字基带信号传输"></a>数字基带信号传输</h3><ol><li><p>误码原因：</p><ul><li>信道加性噪声</li><li>码间串扰（ISI）：系统传输总特性不理想，使前面波形出现很长拖尾，蔓延到当前码元抽样时刻，对当前码元判决造成干扰</li></ul></li><li><p>无码间串扰条件：</p><ul><li>时域条件：h(t)抽样值除了在t=0时不为0，其他所有抽样点都为0</li><li>频域条件:<script type="math/tex">\left\{\begin{matrix}\sum_{i}H(\omega +\frac{2\pi i}{T_{B} } )=T_{B}\cdot C ,\left | \omega \right |\le    \frac{\pi }{T_{B} }   \\h(0)=C\end{matrix}\right.</script></li></ul></li><li><p>双极性信号抗噪声性能优于单极性信号</p></li><li>部分响应系统：<ul><li>频带利用率高（2Baud/Hz）</li><li>波形尾巴振荡衰减加快</li></ul></li><li>相关编码（人为引入码间串扰）：会带来差错传播 模2加</li><li>预编码：避免差错传播</li><li>时域均衡：在接收滤波器后加一个均衡器，减少码间串扰</li></ol>
+              </div>
+            </details>
+<h2 id="数字带通传输系统"><a href="#数字带通传输系统" class="headerlink" title="数字带通传输系统"></a>数字带通传输系统</h2><details class="folding-tag" grey><summary> 详解 </summary>
+              <div class='content'>
+              <div class="note info flat"><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45555522/article/details/122345162">关于包络起伏</a></p></div><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><ol><li>数字调制：用数字基带信号（调制信号）控制载波某个参数的过程</li><li>数字键控法（数字调制技术）：利用数字信号的离散取值特点通过开关键控载波<ul><li>振幅键控（ASK,Amplitude Shift Keying）,对于二进制数字基带信号，1有载波，0无载波</li><li>频移键控(FSK)：载波有两种频率</li><li>相移键控(PSK)，1载波，0载波Π相突变</li></ul></li><li>全波整流器：信号时域取绝对值，此时信号中含有交流分量和直流分量，若再通过低通滤波器，可滤除高频交流分量，留下接近直流的部分</li><li>包络检波器：全波整流+低通滤波器</li><li>2ASK/OOK:二进制数字基带单极性信号，有直流分量，即有离散谱，在f=0有冲激响应<ul><li>相干解调（同步检测）：通过低通滤波器后乘个同频同相载波，效果和通过全波整流器一样</li><li>非相干解调（包络检波）：通过带通滤波器（减少噪声），全波整流器（信号时域取绝对值），低通滤波器（留下直流成分）</li></ul></li><li>2FSK:两个单极性信号，有离散谱</li><li>2PSK:双极性信号，等概时无离散谱<ul><li>缺点：载波恢复过程中存在相位模糊</li></ul></li><li>2DPSK：二进制差分相移键控，先进行差分编码，将绝对码转换成相对码，再进行2PSK<ul><li>相干解调（同步检测）</li><li>非相干解调（差分相干解调，相位比较法）：收到的2DPSK信号延时一个码元间隔，再与2DPSK信号相乘，经低通滤波器后抽样判决，</li></ul></li><li>多进制数字调制系统可以提高频带利用率（有效性），传信率相同，带宽变小<br>误码率增大（判决范围变小），若需保证一定误码率，发射功率要增大</li><li>4PSK也叫QPSK：正交相移键控<ul><li>缺点：最大相位跳变180°</li></ul></li><li>OQPSK:偏置QPSK，Offset QPSK<ul><li>最大相位跳变90°，未根本解决包络起伏问题</li></ul></li></ol><h3 id="抗噪声性能"><a href="#抗噪声性能" class="headerlink" title="抗噪声性能"></a>抗噪声性能</h3><ol><li>非相干解调（包络检波）：发“1”的抽样值服从广义瑞利分布，发“0”抽样值服从瑞利分布<br>大信噪比，误码率记住</li><li>相同信噪比条件下，相干解调误码率更小，抗噪声性能更好，大信噪比时，两者性能相差不大</li><li>2DPSK相干解调，用到码反变换器，将相对码变成绝对码</li></ol>
+              </div>
+            </details>
+<h2 id="新型数字带通调制技术"><a href="#新型数字带通调制技术" class="headerlink" title="新型数字带通调制技术"></a>新型数字带通调制技术</h2><details class="folding-tag" grey><summary> 详解 </summary>
+              <div class='content'>
+              <h3 id="正交振幅调制（QAM）"><a href="#正交振幅调制（QAM）" class="headerlink" title="正交振幅调制（QAM）"></a>正交振幅调制（QAM）</h3><ol><li><p>特点：</p><ul><li>振幅，相位联合键控，频率利用率高，抗噪声性能优于MPSK</li><li>在相同的发送功率条件下，16QAM比16PSK抗噪声性能强（两点之间最小距离（噪声容限）16QAM大，噪声容限越大，抗噪声性能就越强）</li></ul></li><li><p>QAM星座图除方型结构外，还有星型或其他结构</p></li><li><p><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%A4%9A%E5%BE%84%E8%A1%B0%E8%90%BD/5602857">多径衰落解释</a></p><ul><li>衰落：信号包络因传播有了起伏</li></ul></li></ol><ol><li><p>在多径衰落信道中，信号振幅和相位取值越多，受到的影响越大，因而星型比方型更具有吸引力<br>方型星座的QAM信号的产生与接收更易实现（两个正交矢量合成）</p><ul><li>星型16QAM:2种振幅值，8种相位</li><li>方型16QAM:3种振幅值，12种相位</li></ul></li><li><p>对于方型MQAM：利用两个同频正交载波在同一带宽内实现两路并行LASK信号传输</p></li><li><p>频率选择性衰落：不同的频率走相同的路径，衰落是不同的，所以叫选择性衰落<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/ddatalent/article/details/118198520">详解</a></p></li></ol><h3 id="最小移频键控（MSK）"><a href="#最小移频键控（MSK）" class="headerlink" title="最小移频键控（MSK）"></a>最小移频键控（MSK）</h3><ol><li><p>特点：</p><ul><li>包络恒定，相位连续，带宽最小，严格正交的2FSK信号</li><li>与QPSK和OQPSK（这俩功率谱密度一样）相比，MSK的谱密度更为集中，即旁瓣下降得更快，故对相邻频道的干扰较小（但主瓣带宽最大）。</li><li>当用匹配滤波器分别接收每个正交分量时，MSK信号的误比特率性能和2PSK、QPSK及OQPSK等的性能一样；<br>若把它当作FSK信号用相干解调法在每个码元持续时间TB内解调，则其性能将比2PSK信号的性能差3dB。 </li></ul></li><li><p>高斯最小频移键控(GMSK)：在进行MSK调制前将矩形信号脉冲通过高斯型低通滤波器，使信号功率谱密度更加集中，减小对邻道干扰，主瓣带宽第二大</p></li></ol><h3 id="正交频分复用（OFDM）"><a href="#正交频分复用（OFDM）" class="headerlink" title="正交频分复用（OFDM）"></a>正交频分复用（OFDM）</h3><ol><li><p>优点：</p><ul><li>抗多径传播和频率选择性衰落（OFDM同时有很多不同频率的子载波可以调制信号，所以就可以给用户选些信道好的子载波用）<br>子信道的信号带宽小于信道的相关带宽（相对时延远小于一个符号的时间，多路信号几乎是同时到达接收机，这种情况下多径不会造成符号间的干扰），每个子信道可看作平坦型衰落，</li><li>较高频谱利用率</li></ul></li><li><p>缺点：</p><ul><li>对信道产生的频率偏移和相位噪声敏感</li><li>信号峰值功率和平均功率比值大，降低射频功率放大器效率</li></ul></li></ol>
+              </div>
+            </details>
+<h2 id="数字信号的最佳接收"><a href="#数字信号的最佳接收" class="headerlink" title="数字信号的最佳接收"></a>数字信号的最佳接收</h2><details class="folding-tag" grey><summary> 详解 </summary>
+              <div class='content'>
+              <ol><li>确知数字信号的最佳接收：<ul><li>将接收到的信号分别与信源集合中的每一个在周期TB内进行互相关运算，哪个大判为信源集合中的哪一个，若先验概率不相等，还要加上加权因子W进行比较</li><li>先验概率相等时，误码率最大，且此时若噪声功率一定，误码率仅和两种码元波形差的能量有关，差别越大，误码率越小</li></ul></li></ol>
+              </div>
+            </details>
+<h2 id="信源编码"><a href="#信源编码" class="headerlink" title="信源编码"></a>信源编码</h2><details class="folding-tag" grey><summary> 详解 </summary>
+              <div class='content'>
+              <ol><li>周期信号的傅里叶变换：<script type="math/tex; mode=display">f_{T} (t)=\sum_{n=-\infty }^{\infty } F_{n} e^{jnw_{0} t}</script><script type="math/tex; mode=display">f_{T} (t)\Longleftrightarrow 2\pi \sum_{n=-\infty }^{\infty } F_{n} \delta (w-nw_{0} )</script><script type="math/tex; mode=display">F_{n} =\frac{1}{T}\int_{-\infty }^{\infty }  f(t)e^{-jnw_{0} t}</script></li></ol>
+              </div>
+            </details></article><div class="post-copyright"><div class="post-copyright__title"><span class="post-copyright-info"><h>通信原理</h></span></div><div class="post-copyright__type"><span class="post-copyright-info"><a href="https://www.oristar.top/posts/f21a0185.html">https://www.oristar.top/posts/f21a0185.html</a></span></div><div class="post-copyright-m"><div class="post-copyright-m-info"><div class="post-copyright-a"><h>作者</h><div class="post-copyright-cc-info"><h>ℒ</h></div></div><div class="post-copyright-c"><h>发布于</h><div class="post-copyright-cc-info"><h>2023-09-07</h></div></div><div class="post-copyright-u"><h>更新于</h><div class="post-copyright-cc-info"><h>2023-12-09</h></div></div><div class="post-copyright-c"><h>许可协议</h><div class="post-copyright-cc-info"><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a rel="noopener" target="_blank" title="CC BY-NC-SA 4.0" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></div></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://s2.loli.net/2023/09/07/27yk3jErK1cYhX4.webp" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://lib.baomitu.com/social-share.js/1.0.16/css/share.min.css" media="print" onload="this.media='all'"><script src="https://lib.baomitu.com/social-share.js/1.0.16/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/99e3a19.html"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/08/26/FYe913shNUJ7Qqw.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Matlab实现信号分析与处理</div></div></a></div><div class="next-post pull-right"><a href="/posts/6dd71ccc.html"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/10/21/3X7gdVDwLStY9vq.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">单片机原理及应用</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%AA%E8%AE%BA"><span class="toc-number">1.</span> <span class="toc-text">绪论</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E4%BF%A1%E7%B3%BB%E7%BB%9F%E7%BB%84%E6%88%90%E6%A1%86%E5%9B%BE%E4%B8%AD%E5%90%84%E9%83%A8%E5%88%86%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-number">1.1.</span> <span class="toc-text">通信系统组成框图中各部分的作用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E9%80%9A%E4%BF%A1%E7%9A%84%E7%89%B9%E7%82%B9"><span class="toc-number">1.2.</span> <span class="toc-text">数字通信的特点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%A6%E5%8F%B7%E5%B9%B3%E5%9D%87%E4%BF%A1%E6%81%AF%E9%87%8F%EF%BC%88%E4%BF%A1%E6%BA%90%E7%86%B5%EF%BC%89%E7%9A%84%E8%AE%A1%E7%AE%97"><span class="toc-number">1.3.</span> <span class="toc-text">符号平均信息量（信源熵）的计算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E4%BF%A1%E7%B3%BB%E7%BB%9F%E5%8F%AF%E9%9D%A0%E6%80%A7%E5%92%8C%E6%9C%89%E6%95%88%E6%80%A7%E6%8C%87%E6%A0%87"><span class="toc-number">1.4.</span> <span class="toc-text">通信系统可靠性和有效性指标</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A8%A1%E6%8B%9F%E9%80%9A%E4%BF%A1%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.4.1.</span> <span class="toc-text">模拟通信系统</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E9%80%9A%E4%BF%A1%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.4.2.</span> <span class="toc-text">数字通信系统</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B"><span class="toc-number">2.</span> <span class="toc-text">随机过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%BF%E4%B9%89%E5%B9%B3%E7%A8%B3%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B%E7%9A%84%E5%88%A4%E5%AE%9A%E8%A7%84%E5%88%99"><span class="toc-number">2.1.</span> <span class="toc-text">广义平稳随机过程的判定规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%84%E6%80%81%E5%8E%86%E7%BB%8F%E6%80%A7"><span class="toc-number">2.2.</span> <span class="toc-text">各态历经性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%B3%E7%A8%B3%E8%BF%87%E7%A8%8B%E8%87%AA%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="toc-number">2.3.</span> <span class="toc-text">平稳过程自相关函数的性质</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%B4%E7%BA%B3%E2%80%94%E2%80%94%E8%BE%9B%E9%92%A6%E5%AE%9A%E7%90%86"><span class="toc-number">2.4.</span> <span class="toc-text">维纳——辛钦定理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AB%98%E6%96%AF%EF%BC%88%E6%AD%A3%E6%80%81%EF%BC%89%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B"><span class="toc-number">2.5.</span> <span class="toc-text">高斯（正态）随机过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AA%84%E5%B8%A6%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B"><span class="toc-number">2.6.</span> <span class="toc-text">窄带随机过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A3%E5%BC%A6%E6%B3%A2%E5%8A%A0%E7%AA%84%E5%B8%A6%E9%AB%98%E6%96%AF%E5%99%AA%E5%A3%B0"><span class="toc-number">2.7.</span> <span class="toc-text">正弦波加窄带高斯噪声</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AB%98%E6%96%AF%E7%99%BD%E5%99%AA%E5%A3%B0"><span class="toc-number">2.8.</span> <span class="toc-text">高斯白噪声</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%A1%E9%81%93"><span class="toc-number">3.</span> <span class="toc-text">信道</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%A1%E9%81%93%E7%9A%84%E5%88%86%E7%B1%BB"><span class="toc-number">3.1.</span> <span class="toc-text">信道的分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%81%92%E5%8F%82%E4%BF%A1%E9%81%93"><span class="toc-number">3.2.</span> <span class="toc-text">恒参信道</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9A%8F%E5%8F%82%E4%BF%A1%E9%81%93"><span class="toc-number">3.3.</span> <span class="toc-text">随参信道</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E5%BE%84%E6%95%88%E5%BA%94"><span class="toc-number">3.4.</span> <span class="toc-text">多径效应</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%81%BF%E5%85%8D%E9%A2%91%E7%8E%87%E9%80%89%E6%8B%A9%E6%80%A7%E8%A1%B0%E8%90%BD"><span class="toc-number">3.5.</span> <span class="toc-text">避免频率选择性衰落</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%A1%E9%81%93%E5%AE%B9%E9%87%8F"><span class="toc-number">3.6.</span> <span class="toc-text">信道容量</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E6%8B%9F%E8%B0%83%E5%88%B6%E7%B3%BB%E7%BB%9F"><span class="toc-number">4.</span> <span class="toc-text">模拟调制系统</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A"><span class="toc-number">4.1.</span> <span class="toc-text">名词解释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B0%83%E5%88%B6"><span class="toc-number">4.2.</span> <span class="toc-text">调制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E8%B0%83%E5%88%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%8A%97%E5%99%AA%E5%A3%B0%E6%80%A7%E8%83%BD"><span class="toc-number">4.3.</span> <span class="toc-text">线性调制系统的抗噪声性能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%9E%E7%BA%BF%E6%80%A7%E8%B0%83%E5%88%B6%EF%BC%88%E8%A7%92%E5%BA%A6%E8%B0%83%E5%88%B6%EF%BC%89"><span class="toc-number">4.4.</span> <span class="toc-text">非线性调制（角度调制）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#FM"><span class="toc-number">4.4.1.</span> <span class="toc-text">FM</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B0%83%E9%A2%91%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%8A%97%E5%99%AA%E5%A3%B0%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90"><span class="toc-number">4.5.</span> <span class="toc-text">调频系统的抗噪声性能分析</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%A7%E4%BF%A1%E5%99%AA%E6%AF%94"><span class="toc-number">4.5.1.</span> <span class="toc-text">大信噪比</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%A8%E9%99%90%E6%95%88%E5%BA%94"><span class="toc-number">4.6.</span> <span class="toc-text">门限效应</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E8%B0%83"><span class="toc-number">4.7.</span> <span class="toc-text">解调</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">4.8.</span> <span class="toc-text">总结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E5%9F%BA%E5%B8%A6%E4%BC%A0%E8%BE%93%E7%B3%BB%E7%BB%9F"><span class="toc-number">5.</span> <span class="toc-text">数字基带传输系统</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A6%82%E5%BF%B5"><span class="toc-number">5.1.</span> <span class="toc-text">概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E5%B8%A6%E4%BF%A1%E5%8F%B7%E7%9A%84%E9%A2%91%E8%B0%B1%E7%89%B9%E6%80%A7"><span class="toc-number">5.2.</span> <span class="toc-text">基带信号的频谱特性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E5%B8%A6%E4%BC%A0%E8%BE%93%E7%9A%84%E5%B8%B8%E7%94%A8%E7%A0%81%E5%9E%8B"><span class="toc-number">5.3.</span> <span class="toc-text">基带传输的常用码型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E5%9F%BA%E5%B8%A6%E4%BF%A1%E5%8F%B7%E4%BC%A0%E8%BE%93"><span class="toc-number">5.4.</span> <span class="toc-text">数字基带信号传输</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E5%B8%A6%E9%80%9A%E4%BC%A0%E8%BE%93%E7%B3%BB%E7%BB%9F"><span class="toc-number">6.</span> <span class="toc-text">数字带通传输系统</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">6.1.</span> <span class="toc-text">基本概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%97%E5%99%AA%E5%A3%B0%E6%80%A7%E8%83%BD"><span class="toc-number">6.2.</span> <span class="toc-text">抗噪声性能</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B0%E5%9E%8B%E6%95%B0%E5%AD%97%E5%B8%A6%E9%80%9A%E8%B0%83%E5%88%B6%E6%8A%80%E6%9C%AF"><span class="toc-number">7.</span> <span class="toc-text">新型数字带通调制技术</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A3%E4%BA%A4%E6%8C%AF%E5%B9%85%E8%B0%83%E5%88%B6%EF%BC%88QAM%EF%BC%89"><span class="toc-number">7.1.</span> <span class="toc-text">正交振幅调制（QAM）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E5%B0%8F%E7%A7%BB%E9%A2%91%E9%94%AE%E6%8E%A7%EF%BC%88MSK%EF%BC%89"><span class="toc-number">7.2.</span> <span class="toc-text">最小移频键控（MSK）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A3%E4%BA%A4%E9%A2%91%E5%88%86%E5%A4%8D%E7%94%A8%EF%BC%88OFDM%EF%BC%89"><span class="toc-number">7.3.</span> <span class="toc-text">正交频分复用（OFDM）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E7%9A%84%E6%9C%80%E4%BD%B3%E6%8E%A5%E6%94%B6"><span class="toc-number">8.</span> <span class="toc-text">数字信号的最佳接收</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%A1%E6%BA%90%E7%BC%96%E7%A0%81"><span class="toc-number">9.</span> <span class="toc-text">信源编码</span></a></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="ft"><div class="ft-item-1"><div class="t-top"><div class="t-t-l"><p class="ft-t t-l-t">修仙语录</p><div class="bg-ad"><div>曾经天上三千劫，又在人间五百年。<br >腰下剑锋横紫电，炉中丹焰起苍烟。<br >才骑白鹿过苍海，复跨青牛入洞天。<br >小技等闲聊戏尔，无人知我是真仙。</div><div class="btn-xz-box"><a class="btn-xz" target="_blank" rel="noopener" href="https://www.4399.com/">点击开启修仙之路</a></div></div></div><div class="t-t-r"><p class="ft-t t-l-t">网站导航</p><ul class="ft-links"><li><a target="_blank" rel="noopener" href="https://search.chongbuluo.com/">虫部落</a><a target="_blank" rel="noopener" href="https://www.52pojie.cn/">吾爱破解</a></li><li><a target="_blank" rel="noopener" href="https://imagestool.com/zh_CN/index.html">图片转换</a><a target="_blank" rel="noopener" href="https://smms.app/">图床</a></li><li><a target="_blank" rel="noopener" href="https://www.latexlive.com/">Latex</a><a target="_blank" rel="noopener" href="https://poe.com/chatgpt">Chatgpt</a></li><li><a target="_blank" rel="noopener" href="https://xiezuocat.com/#/?s=catbd18">智能写作</a><a target="_blank" rel="noopener" href="http://oeasy.org/">Oeasy</a></li><li><a target="_blank" rel="noopener" href="https://convertio.co/zh/">文件转换</a><a target="_blank" rel="noopener" href="https://csdiy.wiki/">自学指南</a></li><li><a target="_blank" rel="noopener" href="https://www.lvruanhome.com/">绿软之家</a><a target="_blank" rel="noopener" href="https://acgfantuan.com/">ACG饭团</a></li></ul></div></div></div><div class="ft-item-2"><p class="ft-t">推荐友链</p><div class="ft-img-group"><div class="img-group-item"><a target="_blank" rel="noopener" href="https://www.fomal.cc/" title="Fomalhaut🥝"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.bitiful.net/img/avatar.webp" alt=""/></a></div><div class="img-group-item"><a target="_blank" rel="noopener" href="https://frechen026.github.io/" title="Frechen026"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/03/10/yFU1XmJBxQcCoz6.jpg" alt=""/></a></div><div class="img-group-item"><a target="_blank" rel="noopener" href="https://study.zwjjiaozhu.top/" title="西园公子"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://study.zwjjiaozhu.top/avatar.jpg" alt=""/></a></div><div class="img-group-item"><a target="_blank" rel="noopener" href="https://fe32.top/" title="唐志远の博客"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://bu.dusays.com/2022/05/02/626f92e193879.jpg" alt=""/></a></div><div class="img-group-item"><a target="_blank" rel="noopener" href="https://akilar.top/" title="Akilarの糖果屋"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.bitiful.net/img/akilar.jpg" alt=""/></a></div><div class="img-group-item"><a target="_blank" rel="noopener" href="https://blog.anheyu.com/" title="安知鱼"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.bitiful.net/img/anzhiyu.jpg" alt=""/></a></div></div></div></div><div class="copyright"><span><b>&copy;2023 - 2024</b></span><span><b>&nbsp;&nbsp;By ℒ</b></span></div><div class="footer_custom_text">愿你前行的道路有群星闪耀，愿你留下的足迹有百花绽放。<br />你即是上帝的馈赠，世界因你而瑰丽。✨✨</div><div id="workboard"></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" title="博客框架为Hexo_v6.3.0"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.bitiful.net/badge/Frame-Hexo-blue.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://butterfly.js.org/" style="margin-inline:5px" title="主题版本Butterfly_v4.3.1"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.bitiful.net/badge/Theme-Butterfly-6513df.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://vercel.com/" style="margin-inline:5px" title="本站采用多线部署，主线路托管于Vercel"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.bitiful.net/badge/Hosted-Vercel-brightgreen.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" title="本网站源码由Github提供存储仓库"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.bitiful.net/badge/Source-Github-d021d6.svg" alt=""/></a><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" title=" 本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&amp;logo=Claris" alt=""/></a></p></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button><button id="go-down" type="button" title="直达底部" onclick="btf.scrollToDest(document.body.scrollHeight, 500)"><i class="fas fa-arrow-down"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div class="js-pjax" id="rightMenu"><div class="rightMenu-group rightMenu-small"><a class="rightMenu-item" href="javascript:window.history.back();"><i class="fa fa-arrow-left"></i></a><a class="rightMenu-item" href="javascript:window.history.forward();"><i class="fa fa-arrow-right"></i></a><a class="rightMenu-item" href="javascript:window.location.reload();"><i class="fa fa-refresh"></i></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-text"><a class="rightMenu-item" href="javascript:rmf.copySelect();"><i class="fa fa-copy"></i><span>复制</span></a><a class="rightMenu-item" href="javascript:window.open(&quot;https://www.baidu.com/s?wd=&quot;+window.getSelection().toString());window.location.reload();"><i class="fa fa-search"></i><span>百度搜索</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-too"><a class="rightMenu-item" href="javascript:window.open(window.getSelection().toString());window.location.reload();"><i class="fa fa-link"></i><span>转到链接</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-paste"><a class="rightMenu-item" href="javascript:rmf.paste()"><i class="fa fa-copy"></i><span>粘贴</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-post"><a class="rightMenu-item" href="javascript:rmf.copyWordsLink()"><i class="fa fa-link"></i><span>复制本文地址</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-to"><a class="rightMenu-item" href="javascript:rmf.openWithNewTab()"><i class="fa fa-window-restore"></i><span>新窗口打开</span></a><a class="rightMenu-item" id="menu-too" href="javascript:rmf.open()"><i class="fa fa-link"></i><span>转到链接</span></a><a class="rightMenu-item" href="javascript:rmf.copyLink()"><i class="fa fa-copy"></i><span>复制链接</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-img"><a class="rightMenu-item" href="javascript:rmf.saveAs()"><i class="fa fa-download"></i><span>保存图片</span></a><a class="rightMenu-item" href="javascript:rmf.openWithNewTab()"><i class="fa fa-window-restore"></i><span>在新窗口打开</span></a><a class="rightMenu-item" href="javascript:rmf.copyLink()"><i class="fa fa-copy"></i><span>复制图片链接</span></a></div><div class="rightMenu-group rightMenu-line"><a class="rightMenu-item" href="javascript:rmf.switchReadMode();"><i class="fa fa-book"></i><span>阅读模式</span></a><a class="rightMenu-item" href="javascript:rmf.switchDarkMode();"><i class="fa fa-moon"></i><span>昼夜切换</span></a><a class="rightMenu-item" href="/about/"><i class="fa fa-info-circle"></i><span>关于博客</span></a><a class="rightMenu-item" href="javascript:rmf.fullScreen();"><i class="fas fa-expand"></i><span>切换全屏</span></a><a class="rightMenu-item" href="javascript:window.print();"><i class="fa-solid fa-print"></i><span>打印页面</span></a></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.staticfile.org/fancyapps-ui/4.0.31/fancybox.umd.min.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/instant.page/5.1.0/instantpage.min.js" type="module"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/vanilla-lazyload/17.3.1/lazyload.iife.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/node-snackbar/0.1.16/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (true){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.1
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        insertScript: [200, () => {
+          document.querySelectorAll('mjx-container').forEach(node => {
+            if (node.hasAttribute('display')) {
+              btf.wrap(node, 'div', { class: 'mathjax-overflow' })
+            } else {
+              btf.wrap(node, 'span', { class: 'mathjax-overflow' })
+            }
+          });
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script></div><script defer src="https://npm.elemecdn.com/jquery@latest/dist/jquery.min.js"></script><script type="text/javascript" src="https://cdn1.tianli0.top/npm/jquery@latest/dist/jquery.min.js"></script><script defer data-pjax src="/js/cat.min.js"></script><script type="text/javascript" src="/js/rightmenu.min.js"></script><canvas id="snow"></canvas><script async src="/js/snow.min.js"></script><canvas id="universe"></canvas><script async src="/js/universe.min.js"></script><script defer  src="/js/ali_font.min.js"></script><script defer  src="/js/liang.js"></script><script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script><div class="aplayer no-destroy" data-id="7598476578" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true" > </div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="30" mobile="false" src="https://cdnjs.cloudflare.com/ajax/libs/butterfly-extsrc/1.1.3/canvas-nest.min.js"></script><link rel="stylesheet" href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.js"></script><script src="https://cdn1.tianli0.top/npm/js-heo@1.0.12/metingjs/Meting.min.js"></script><script src="https://lib.baomitu.com/pjax/0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show","#web_bg",".js-pjax","#bibi","body > title","#app","#tag-echarts","#posts-echart","#categories-echarts"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --> <script data-pjax>if(document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+    var parent = document.getElementById('recent-posts');
+    var child = '<div class="recent-post-item" style="width:100%;height: auto"><div id="catalog_magnet"><div class="magnet_item"><a class="magnet_link" href="https://www.oristar.top/categories/通信/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">📚 通信笔记 (8)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://www.oristar.top/categories/杂谈/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🩸 拾枝杂谈 (2)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item" style="visibility: hidden"></div><a class="magnet_link_more"  href="https://www.oristar.top/categories" style="flex:1;text-align: center;margin-bottom: 10px;">查看更多...</a></div></div>';
+    console.log('已挂载magnet')
+    parent.insertAdjacentHTML("afterbegin",child)}
+     </script><style>#catalog_magnet{flex-wrap: wrap;display: flex;width:100%;justify-content:space-between;padding: 10px 10px 0 10px;align-content: flex-start;}.magnet_item{flex-basis: calc(33.333333333333336% - 5px);background: #f2f2f2;margin-bottom: 10px;border-radius: 8px;transition: all 0.2s ease-in-out;}.magnet_item:hover{background: #778899}.magnet_link_more{color:#555}.magnet_link{color:black}.magnet_link:hover{color:white}@media screen and (max-width: 600px) {.magnet_item {flex-basis: 100%;}}.magnet_link_context{display:flex;padding: 10px;font-size:16px;transition: all 0.2s ease-in-out;}.magnet_link_context:hover{padding: 10px 20px;}</style>
+    <style></style><script data-pjax>
+  function butterfly_swiper_injector_config(){
+    var parent_div_git = document.getElementById('recent-posts');
+    var item_html = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms;"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/4da13fe.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/01/10/uLI37mOEQps1KV9.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-01-10</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/4da13fe.html&quot;);" href="javascript:void(0);" alt="">Matlab入门</a><div class="blog-slider__text">Matlab入门</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/4da13fe.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/3c50d03d.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/01/10/fEuP2e6rng1I9tK.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-01-06</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/3c50d03d.html&quot;);" href="javascript:void(0);" alt="">Markdown语法</a><div class="blog-slider__text">Markdown语法</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/3c50d03d.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载butterfly_swiper')
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  var elist = 'undefined'.split(',');
+  var cpage = location.pathname;
+  var epage = '/';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_swiper_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_swiper_injector_config();
+  }
+  </script><script defer src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer data-pjax src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js"></script><div class="js-pjax"><script async="async">var arr = document.getElementsByClassName('recent-post-item');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '2s');
+    arr[i].setAttribute('data-wow-delay', '200ms');
+    arr[i].setAttribute('data-wow-offset', '30');
+    arr[i].setAttribute('data-wow-iteration', '1');
+  }</script><script async="async">var arr = document.getElementsByClassName('blog-slider swiper-container-fade swiper-container-horizontal');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '1.5s');
+    arr[i].setAttribute('data-wow-delay', '200ms');
+    arr[i].setAttribute('data-wow-offset', '30');
+    arr[i].setAttribute('data-wow-iteration', '1');
+  }</script><script async="async">var arr = document.getElementsByClassName('catalog_magnet');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '1.5s·');
+    arr[i].setAttribute('data-wow-delay', '200ms');
+    arr[i].setAttribute('data-wow-offset', '30');
+    arr[i].setAttribute('data-wow-iteration', '1');
+  }</script><script async="async">var arr = document.getElementsByClassName('card-widget');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '1.5s');
+    arr[i].setAttribute('data-wow-delay', '200ms');
+    arr[i].setAttribute('data-wow-offset', '30');
+    arr[i].setAttribute('data-wow-iteration', '1');
+  }</script></div><script defer src="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/wow.min.js"></script><script defer src="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/wow_init.js"></script><script async src="//at.alicdn.com/t/font_2032782_8d5kxvn09md.js"></script><!-- hexo injector body_end end --></body></html>

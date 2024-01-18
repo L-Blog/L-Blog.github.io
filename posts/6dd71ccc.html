@@ -1,0 +1,397 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>单片机原理及应用 | ℒのℬ𝓁ℴℊ</title><meta name="author" content="ℒ"><meta name="copyright" content="ℒ"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="单片机原理及应用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="单片机原理及应用">
+<meta property="og:url" content="https://www.oristar.top/posts/6dd71ccc.html">
+<meta property="og:site_name" content="ℒのℬ𝓁ℴℊ">
+<meta property="og:description" content="单片机原理及应用">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.loli.net/2023/10/21/3X7gdVDwLStY9vq.jpg">
+<meta property="article:published_time" content="2023-10-21T10:14:33.000Z">
+<meta property="article:modified_time" content="2023-11-18T02:06:50.892Z">
+<meta property="article:author" content="ℒ">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2023/10/21/3X7gdVDwLStY9vq.jpg"><link rel="shortcut icon" href="https://s2.loli.net/2023/01/10/XciUPsnFZV41CxL.jpg"><link rel="canonical" href="https://www.oristar.top/posts/6dd71ccc"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/node-snackbar/0.1.16/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.staticfile.org/fancyapps-ui/4.0.31/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":230},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#6C6C6C","bgDark":"#1f1f1f","position":"top-right"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdnjs.cloudflare.com/ajax/libs/flickr-justified-gallery/2.1.2/fjGallery.min.js',
+      css: 'https://cdnjs.cloudflare.com/ajax/libs/flickr-justified-gallery/2.1.2/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '单片机原理及应用',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-11-18 10:06:50'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const now = new Date()
+          const hour = now.getHours()
+          const isNight = hour <= 6 || hour >= 18
+          if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+          else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><div id="myscoll"></div><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/animate.min.css" media="print" onload="this.media='screen'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><div class="loading-img"></div><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="/css/progress_bar.css"/><script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js"></script><div id="web_bg"><style>#web_bg{
+  background: url(https://s2.loli.net/2023/01/10/14RtGdEKsBLZ57m.jpg) !important;
+  background-attachment: local!important;
+  background-position: center!important;
+  background-size: cover!important;
+  background-repeat: no-repeat!important;
+}
+[data-theme="dark"]
+  #web_bg{
+    background: url(https://s2.loli.net/2023/03/08/uwaHI98BYmZPr3f.jpg) !important;
+    background-attachment: local!important;
+    background-position: center!important;
+    background-size: cover!important;
+    background-repeat: no-repeat!important;
+  }    
+</style></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/08/26/FipKABTCD3eLcMn.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">14</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">7</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-clone"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-cannabis"></i><span> 社交</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友人帐</span></a></li><li><a class="site-page child" href="/collect/"><i class="fa-fw fas fa-coffee"></i><span> 休闲</span></a></li><li><a class="site-page child" href="/comments/"><i class="fa-fw fas fa-envelope-open"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-user"></i><span> 个人</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/book/"><i class="fa-fw fas fa-comment"></i><span> 唠叨</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw fas fa-photo-video"></i><span> 相册</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fab fa-sketch"></i><span> 关于</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://s2.loli.net/2023/10/21/3X7gdVDwLStY9vq.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">ℒのℬ𝓁ℴℊ</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-clone"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-cannabis"></i><span> 社交</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友人帐</span></a></li><li><a class="site-page child" href="/collect/"><i class="fa-fw fas fa-coffee"></i><span> 休闲</span></a></li><li><a class="site-page child" href="/comments/"><i class="fa-fw fas fa-envelope-open"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-user"></i><span> 个人</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/book/"><i class="fa-fw fas fa-comment"></i><span> 唠叨</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw fas fa-photo-video"></i><span> 相册</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fab fa-sketch"></i><span> 关于</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">单片机原理及应用</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-10-21T10:14:33.000Z" title="发表于 2023-10-21 18:14:33">2023-10-21</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-11-18T02:06:50.892Z" title="更新于 2023-11-18 10:06:50">2023-11-18</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E9%80%9A%E4%BF%A1/">通信</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">4011</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>14分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="单片机原理及应用"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="单片机结构原理"><a href="#单片机结构原理" class="headerlink" title="单片机结构原理"></a>单片机结构原理</h2><details class="folding-tag" grey><summary> 详解 </summary>
+              <div class='content'>
+              <ul><li><p>思维导图</p><div class="hide-block"><button type="button" class="hide-button" style="background-color:  grey;">预览  </button><div class="hide-content"><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/10/22/RuBGNHS7LfTIUlp.png" alt="单片机原理及应用1.png"></p></div></div><p>详情见：<a target="_blank" rel="noopener" href="https://www.kdocs.cn/view/l/cqXFH1dDSKpn?from=docs">https://www.kdocs.cn/view/l/cqXFH1dDSKpn?from=docs</a></p></li></ul>
+              </div>
+            </details>
+<h2 id="指令系统"><a href="#指令系统" class="headerlink" title="指令系统"></a>指令系统</h2><details class="folding-tag" grey><summary> 详解 </summary>
+              <div class='content'>
+              <ul><li><p>思维导图</p><div class="hide-block"><button type="button" class="hide-button" style="background-color:  grey;">预览  </button><div class="hide-content"><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/10/23/yGEiobBAYCuSP7H.png" alt="单片机原理及应用2.png"></p></div></div></li><li><p>小结</p><div class="hide-block"><button type="button" class="hide-button" style="background-color:  grey;">预览  </button><div class="hide-content"><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/10/23/3SUGdrmzDPejTZR.jpg" alt="屏幕截图 2023-10-23 092916.jpg"></p></div></div></li></ul>
+              </div>
+            </details>
+<h2 id="51系列单片机的中断系统"><a href="#51系列单片机的中断系统" class="headerlink" title="51系列单片机的中断系统"></a>51系列单片机的中断系统</h2><details class="folding-tag" grey><summary> 详解 </summary>
+              <div class='content'>
+              <ul><li><p>思维导图</p><div class="hide-block"><button type="button" class="hide-button" style="background-color:  grey;">预览  </button><div class="hide-content"><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/10/24/OZkNBQAz4FqKamh.png" alt="单片机原理及应用3.png"></p></div></div><p>详情见：<a target="_blank" rel="noopener" href="https://www.kdocs.cn/view/l/ceSlDz6tGr7G?from=docs">https://www.kdocs.cn/view/l/ceSlDz6tGr7G?from=docs</a></p></li><li><p>中断处理过程示意图：</p><div class="hide-block"><button type="button" class="hide-button" style="background-color:  grey;">预览  </button><div class="hide-content"><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/10/24/26UFT7cDQVpxgLS.jpg" alt="中断处理过程示意图"></p></div></div></li><li><p>程序存储器ROM中中断源位置</p><div class="hide-block"><button type="button" class="hide-button" style="background-color:  grey;">预览  </button><div class="hide-content"><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/10/24/RENtCov8Y1IgMzp.jpg" alt="程序存储器ROM中中断源位置"></p></div></div></li></ul><ol><li>由于各中断入口间只有8个字节，一般情况下不够安排一个完整的中断服务程序。因此，通常总是在中断入口地址处放置一条无条件转移指令，使程序转向真正存放中断服务程序的地址</li><li>中断服务程序编程注意点：<ul><li>根据需要保护现场</li><li>及时清除不能被硬件自动清除的中断请求标志</li><li>中断服务程序中的压栈和出栈指令必须成对使用,以避免堆栈数据出错</li></ul></li><li>串口中断提出申请, 且主程序累加器A需保护，编程注意：<ul><li>在 0000H放一条跳转到主程序的跳转指令, 这是因为  MCS-51单片机复位后, PC的内容变为 0000H, 程序从 0000H 开始执行, 紧接着 0023H是中断程序入口地址, 故在此中间只能插入一条转移指令</li><li>响应中断时, 先自动执行一条隐指令“LCALL 0023H”, 而 0023H至 002BH（串行口中断入口地址）之间可利用的存储单元不够, 故放一条无条件转移指令</li><li>对串行口中断标志位硬件不能自动清除,所以一定要在中断服务程序中要有清标志位RI和TI的指令CLR RI和CLR TI</li><li>在中断服务程序的末尾, 必须安排一条中断返回指令RETI, 使程序自动返回主程序</li></ul></li></ol><h3 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h3><h4 id="题目一"><a href="#题目一" class="headerlink" title="题目一"></a>题目一</h4><ul><li><p>P1.4～P1.7接有四个发光二极管，P1.0～P1.3接四个开关，消抖电路产生中断请求信号，当消抖电路的开关来回拔动一次产生一个下降沿信号，通过INT0  向CPU申请中断，初时发光二极管全灭，每中断一次，P1.0～P1.3所接的开关状态反映到发光二极管上，且要求开关断开的对应发光二极管亮</p></li><li><p>SJMP $:</p><p>跳转到本指令的起始位置开始执行,如果系统的中断是开放的，那么SJMP $指令实际上是在等待中断，当有中断申请后，CPU 转至执行中断服务程序<br>中断返回时，仍然返回到这条死循环指令，继续等待中断，而不是返回到该指令的下一条指令。这是因为执行该指令后，PC 仍指向这条指令，中断的断点就是这条指令的首字节地址</p></li><li><p>汇编语言</p></li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">        ORG   0000H             </span><br><span class="line">        AJMP  MAIN         ；初始化</span><br><span class="line">        ORG   0003H        ；INT0中断入口    </span><br><span class="line">        AJMP  SER1         ；转中断服务程序    </span><br><span class="line">        ORG   0030H        ；主程序    </span><br><span class="line">MAIN：   MOV   P1，#0FH     ；高4位灯灭，低四位输入写1</span><br><span class="line">        SETB  IT0          ；边沿触发中断    </span><br><span class="line">        SETB  EX0          ；允许外中断0中断    </span><br><span class="line">        SETB  EA           ；开中断开关</span><br><span class="line">        SJMP  $            ；等待中断</span><br><span class="line">        ORG   0050H</span><br><span class="line">SER1：  MOV   A，P1        ；    </span><br><span class="line">        SWAP  A            ；累加器A的高半字节和低半字节互换</span><br><span class="line">        MOV   P1，A        ；P1.0～P1.3所接的开关状态反映到发光二极管上</span><br><span class="line">        RETI    </span><br><span class="line">        END  </span><br><span class="line"></span><br></pre></td></tr></table></figure><ul><li>C语言（C51编译器）<br>编译器在规定的中断源的矢量地址中放入无条件转移指令，使CPU响应中断后自动地从矢量地址跳转到中断服务程序的实际地址，而无需用户去安排<br>中断服务程序定义为函数，函数的完整定义如下:<br>返回值  函数名(［参数］) interrupt n［using m］<br>interrupt n：将函数声明为中断服务函数，n为中断源编号，0～31间的整数，编译器从8n+3处产生中断向量地址，n不允许是带运算符的表达式<br>using m：函数使用的工作寄存器组，m的取值范围为0～3，可缺省<ul><li>影响：函数入口处将当前寄存器保存，使用m指定的寄存器组，函数退出时原寄存器组恢复。选不同的工作寄存器组，可方便实现寄存器组的现场保护</li></ul></li></ul><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;reg51.h&gt;</span>  </span></span><br><span class="line">int0( ) interrupt <span class="number">0</span>   <span class="comment">/*INT0中断函数*/</span> </span><br><span class="line">｛  P1=<span class="number">0x0f</span>;          <span class="comment">/*输入端先置1，灯灭*/</span></span><br><span class="line">    P1&lt;&lt;=<span class="number">4</span>;           <span class="comment">/* 读入开关状态，并左移四位，</span></span><br><span class="line"><span class="comment"> ｝                   使开关反映在发光二极管上*/</span>        </span><br><span class="line">main( )    </span><br><span class="line">｛          </span><br><span class="line">   EA=<span class="number">1</span>;           <span class="comment">/*开中断总开关*/</span>    </span><br><span class="line">   EX0=<span class="number">1</span>;          <span class="comment">/*允许INT0中断*/</span>    </span><br><span class="line">   IT0=<span class="number">1</span>;          <span class="comment">/*下降沿产生中断*/</span></span><br><span class="line">   <span class="keyword">while</span>(<span class="number">1</span>);       <span class="comment">/*等待中断,语句进入死循环等待中断，当拨动INT0的开关后，进入中断函数，读入P1.0～P1.3的开关状态并将状态数据右移四位到P1.4～P1.7的位置上输出控制LED亮，执行完中断，返回到等待中断的while(1)语句，等待下一次的中断。*/</span>    </span><br><span class="line"> ｝    </span><br><span class="line"></span><br></pre></td></tr></table></figure><h4 id="题目二"><a href="#题目二" class="headerlink" title="题目二"></a>题目二</h4><ul><li><p>AT89S51的P1口接一个共阴极的数码管，利用消抖开关产生中断请求信号，每来回拔动一次开关，产生一次中断，用数码管显示中断的次数(最多15次，十六进制数显示)</p></li><li><p>汇编语言</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">       ORG   0000H                </span><br><span class="line">       AJMP  MAIN    </span><br><span class="line">       ORG   0013H          ；INT1中断入口    </span><br><span class="line">       AJMP  INT1           ；转中断服务程序    </span><br><span class="line">       ORG   0030H          ；主程序    </span><br><span class="line">MAIN： SETB  IT1            ；边沿触发中断    </span><br><span class="line">       SETB  EX1            ；允许INT1中断    </span><br><span class="line">       SETB  EA             ；开中断开关    </span><br><span class="line">       MOV   R0，#0         ；计数初值为0    </span><br><span class="line">       MOV   A，#3FH        ；“0”的字形码送A    </span><br><span class="line">		   MOV   DPTR，#TAB     ；指向数码表    </span><br><span class="line">WAIT： SJMP  WAIT           ；等待中断 </span><br><span class="line">INT1： INC   R0            ；中断次数加1    </span><br><span class="line">       MOV   A， R0    </span><br><span class="line">       MOVC  A， @A+DPTR   ；查表    </span><br><span class="line">       MOV   P1，A</span><br><span class="line">       CJNE  R0，#0FH   RE  </span><br><span class="line">       MOV   R0，#0</span><br><span class="line">RE：   RETI                ；AL1地址→PC，返主程序AL处</span><br><span class="line">TAB： DB   3FH，06H，5BH，4FH，66H，6DH</span><br><span class="line">      DB   7DH，07H，7FH，6FH，77H，7CH</span><br><span class="line">      DB   39H，5EH，79H，71H             ；字形码表</span><br><span class="line">      END  </span><br><span class="line"></span><br></pre></td></tr></table></figure></li></ul><ul><li>C语言(在中断服务程序中控制中断次数)<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;reg51.h&gt;</span>    </span></span><br><span class="line"><span class="type">char</span> i;    </span><br><span class="line">code <span class="type">char</span> tab［<span class="number">16</span>］= ｛<span class="number">0x3f</span>,<span class="number">0x06</span>,<span class="number">0x5b</span>,<span class="number">0x4F0</span>x66,<span class="number">0x6d</span>,<span class="number">0x7d</span>,</span><br><span class="line">        <span class="number">0x07</span>, <span class="number">0x7f</span>,<span class="number">0x6f</span>,<span class="number">0x77</span>,<span class="number">0x7c</span>,<span class="number">0x39</span>,<span class="number">0x5e</span>,<span class="number">0x79</span>,<span class="number">0x71</span>｝; </span><br><span class="line"> </span><br><span class="line"><span class="type">int</span>() interrupt <span class="number">2</span>    </span><br><span class="line">｛    </span><br><span class="line">     i++    </span><br><span class="line">     <span class="keyword">if</span> (i＜<span class="number">16</span>) P1=tab［i］；    </span><br><span class="line">     <span class="keyword">else</span>｛i=<span class="number">0</span>;P1=<span class="number">0x3f</span>;｝</span><br><span class="line">  ｝    </span><br><span class="line">main()</span><br><span class="line">｛    </span><br><span class="line">    EA=<span class="number">1</span>;    </span><br><span class="line">    EX1=<span class="number">1</span>;     </span><br><span class="line">    IT1=<span class="number">1</span>;</span><br><span class="line">    P1=<span class="number">0x3f</span>；    </span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>);          <span class="comment">/*等待中断*/</span>    </span><br><span class="line">  ｝ </span><br></pre></td></tr></table></figure></li></ul>
+              </div>
+            </details>
+<h2 id="MCS-51单片机定时-计数器"><a href="#MCS-51单片机定时-计数器" class="headerlink" title="MCS - 51单片机定时/计数器"></a>MCS - 51单片机定时/计数器</h2><details class="folding-tag" grey><summary> 详解 </summary>
+              <div class='content'>
+              <ol><li><p>定时/计数器用途：</p><ul><li>输出一定频率、一定占空比的波形</li><li>测量脉冲宽度</li><li>对外部信号计数</li><li>扩展外部中断</li></ul></li><li><p>初始化编程：</p><ul><li>方式选择、定时或计数的选择（1计数，0定时）、是否使用门控信号反映在TMOD中</li><li>计算计数值，填写在TL0、TH0或TL1、TH1中</li><li>如果使用定时中断，则需要进行中断的初始化，包括IE（开放中断EA=1, 定时器Tx 中断允许ETx=1 ）、IP寄存器的设定</li><li>启动定时器工作，设置TCON中的TR0或TR1</li></ul></li><li><p>T0/T1对外部时钟计数（外部脉冲的下降沿触发计数）时，外时钟的最大频率振荡频率的1/24<br>计数器在每个机器周期S5P2(第5个状态周期的P2节拍)期间采样，若一个机器周期采样值为1，下一个机器周期采样值为0，则计数器加1<br>因此 ，外部计数脉冲一个周期最少两个机器周期，即24个振荡周期</p></li><li><p>JBC指令：判断可位寻址区域内指定位是否为1，为1则跳转到指定位置，并同时清除该位（置0）</p></li><li><p>CPL指令：直接寻址位取反</p></li><li><p>系统复位后，SP的初始值为07H，使得堆栈实际上是从08H开始的。但我们从RAM的结构分布中可知，08H—1FH隶属1—3工作寄存器区，若编程时需要用到这些数据单元，必须对堆栈指针SP进行初始化，原则上设在任何一个区域均可，但一般设在30H—1FH之间较为适宜。<br>在8051单片机中，入栈SP+2,出栈SP-2</p></li><li><p>通常T1用作串行接口的波特率发生器时，T0工作在方式3</p></li></ol><h3 id="方式-0-的应用"><a href="#方式-0-的应用" class="headerlink" title="方式  0 的应用"></a>方式  0 的应用</h3><p>题目：利用定时器T1定时，在P1.0输出周期为  1 ms的方波, 设单片机晶振频率为 6 MHz<br>分析：</p><ul><li>每隔 0.5ms对  P1.0 取反一次即可得到这个方波</li><li>计算计数初值：<br>机器周期=12÷6 MHz= 2 μs<br>需要计数次数N:N=0.5ms÷2 μs =250<br>初值X=M－N=8 192－250=7 942=1F06H   0001 1111 000 | 0 0110<br>13 位计数器,TL1 使用了低5位 00110（06H）,TH1用8位（6~13位）1111 1000(F8H)<br>TMOD初始化: TMOD=0000 0000B=00H<br>TCON初始化: 启动TR1=1<br>IE初始化: 开放中断EA=1, 定时器T1 中断允许ET1=1</li></ul><ul><li><p>汇编语言(直接查溢出标志位)</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">       ORG  0000H     </span><br><span class="line">       AJMP  START          ; 复位入口</span><br><span class="line">       ORG  0030H</span><br><span class="line">START: MOV  SP, ＃60H        ; 数据缓冲区（30H~7FH），用于堆栈</span><br><span class="line">       MOV  TH1, ＃0F8H     ; T1赋初值</span><br><span class="line">       MOV  TL1, ＃06H</span><br><span class="line">       MOV  TMOD, ＃00H</span><br><span class="line">       SETB  TR1            ; 启动T1</span><br><span class="line">LP1:   JBC   TF1,   LP2     ;查询定时器1溢出标志位是否置1，为1转到LP2</span><br><span class="line">       AJMP   LP1</span><br><span class="line">LP2:   MOV  TH1, ＃0F8H     ; T1赋初值</span><br><span class="line">       MOV  TL1, ＃06H</span><br><span class="line">       CPL    P1.0          ；P1.0位取反</span><br><span class="line">       AJMP  LP1</span><br><span class="line"></span><br></pre></td></tr></table></figure></li><li><p>C语言</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;reg51.h&gt;</span></span></span><br><span class="line">sbit  p10=p1^<span class="number">0</span>;</span><br><span class="line">main()</span><br><span class="line">&#123;</span><br><span class="line">    TMOD=<span class="number">0</span>;</span><br><span class="line">    TH1=<span class="number">0xf8</span>;</span><br><span class="line">    TL1<span class="number">-0x06</span>;</span><br><span class="line">    TR1=<span class="number">1</span>;</span><br><span class="line">    While(<span class="number">1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">             <span class="keyword">do</span>  &#123; &#125;  <span class="keyword">while</span>(TF1==<span class="number">0</span>);</span><br><span class="line">             P10=~p10; </span><br><span class="line">             TH1=<span class="number">0xf8</span>;</span><br><span class="line">            TL1<span class="number">-0x06</span>;</span><br><span class="line">            TF1=<span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">&#125; </span><br><span class="line"></span><br></pre></td></tr></table></figure></li><li><p>汇编语言(采用中断)</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">       ORG  0000H     </span><br><span class="line">       AJMP  START             ; 复位入口</span><br><span class="line">       ORG  001BH</span><br><span class="line">       AJMP  T1INT             ; T1中断入口</span><br><span class="line">       ORG  0030H</span><br><span class="line">START: MOV  SP, ＃60H          ; 初始化程序</span><br><span class="line">       MOV  TH1, ＃0F8H        ; T0赋初值</span><br><span class="line">       MOV  TL1, ＃06H</span><br><span class="line">       MOV  TMOD, ＃00H</span><br><span class="line">       SETB  TR1               ; 启动T1 </span><br><span class="line">       SETB  ET1               ; 开T1中断</span><br><span class="line">       SETB  EA                ; 开总允许中断</span><br><span class="line"> MAIN: AJMP  MAIN              ; 主程序,等待中断</span><br><span class="line">T1INT: CPL  P1.0</span><br><span class="line">       MOV  TL1,  ＃06H</span><br><span class="line">       MOV  TH1, ＃0F8H</span><br><span class="line">       RETI</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></li></ul>
+              </div>
+            </details>
+<h2 id="单片机串行口及应用"><a href="#单片机串行口及应用" class="headerlink" title="单片机串行口及应用"></a>单片机串行口及应用</h2><details class="folding-tag" grey><summary> 详解 </summary>
+              <div class='content'>
+              <ol><li>在串行异步传送中,CPU与外设之间事先必须约定：<ul><li>字符格式：用ASCII码通信，有效数据为7位,加1个奇偶校验位、1个起始位（”0”）和1个停止位（”1”）共10位。停止位也可大于1位</li><li>波特率(Baudrate):波特率是数据的传送速率,即每秒钟传送的二进制位数,单位为位/秒。它与字符的传送速率(字符/秒)之间存在如下关系<br>波特率=位/字符×字符/秒=位/秒<br>发送端与接收端的波特率必须一致<br>这里的波特率相当于通原中的传信率bit/s，传码率(符号/s)<br><strong>波特率是可变的, 它取决于定时器 T1 的溢出速率及SMOD的状态</strong></li></ul></li><li>与方式1不同, 方式2和3中装入RB8的是第9位数据, 而不是停止位。所接收的停止位的值与SBUF、 RB8 和 RI都没有关系, 这一特点可用于多机通信</li><li><p>串行口的初始化编程:</p><ul><li>按选定的串口工作方式设定SCON的SM0、SM1位</li><li>对于工作方式 2 或 3, 应根据需要在TB8中写入待发送的第9位数据</li><li>若选定的不是方式 0，还需设定接收/发送的波特率</li><li>设定SMOD(在PCON的最高位)的状态, 以控制波特率是否加倍</li><li>若选定工作方式1或3, 则应对定时器T1进行初始化以设定其溢出率</li></ul></li><li><p>四种工作方式：<br> 方式1为8位通信， 波特率可变<br> 方式2为9位通信，波特率为两种可选<br> 方式3为9位通信， 波特率可变</p></li><li><p>方式1和方式3波特率与T1溢出率有关，<br>通常T1工作在方式2，对机器周期计数，<br>计算溢出率 时，如果T1工作在0，1方式，则会产生误差</p></li><li><p>定时器T1作为波特率发生器, 通常选用定时方式2（8 位重装载初值方式），此时禁止 T1 中断</p></li><li><p>波特率设计：</p><ul><li>方式0：波特率（固定）=fosc（晶振频率）/12</li><li>方式2：波特率（两种情况）<ul><li>SMOD=0，fosc/64</li><li>SMOD=1，fosc/32</li></ul></li><li>方式1（传10位，8位数据位）和方式3（传11位，有个用户定义位，一般是奇偶校验位）<script type="math/tex; mode=display">\frac{2^{SMOD} }{32} \times \frac{f_{osc} }{12\times (2^{8} -TH_{1} (计数初值))}</script></li></ul></li></ol><ol><li>总结：<ul><li>SCON(串行接口控制寄存器，可位寻址)：串口工作方式选择，是否允许接收，查询有无发送/接收中断</li><li>PCON(电源控制寄存器，不可位寻址)：D7位SMOD，为“1”，波特率加倍，为“0”，波特率不加倍</li><li>若用到定时器T1<br>TR1置1，定时器启动<br>TMOD（定时器/计数器方式寄存器，不可位寻址）：控制定时器的工作方式，T1在方式2<br>设置计数初值：TH1,TL1</li></ul></li></ol><h3 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h3><h4 id="题一"><a href="#题一" class="headerlink" title="题一"></a>题一</h4><p>设某单片机系统需通过串行口与一微机系统双向通信,采用1位起 始位、8位数据和1位停止位的协议，波特率为2400。单片机上电复位后，首先向微机发送一个55H。编写单片机的初始化程序</p><ul><li>分析：<br>单片机串行口应工作于方式1，允许接收，SCON=01010000B;<br>  采用Timer1作波特率发生器，T1工作于方式2，定时方式，TMOD=20H<br>  T1初值为F4H</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">MOV   SCON,   #01010000B　；初始化串口</span><br><span class="line">MOV   PCON,   #00H           ；SMOD=0</span><br><span class="line">MOV   TMOD,  #20H            ; # 0010 0000　初始化定时器1</span><br><span class="line">MOV    TH1,      #0F4H       ;TL1计数溢出时，将TH1的内容重新装载到TL1</span><br><span class="line">MOV    TL1,      #0F4H</span><br><span class="line">SETB    TR1                         ; 启动定时器</span><br><span class="line">SETB    ES                            ; 允许串口中断</span><br><span class="line">SETB    EA                           ;  开中断总开关</span><br><span class="line">MOV     SBUF ,  #55H         ; 向微机发送#55H</span><br><span class="line"></span><br></pre></td></tr></table></figure><h4 id="题二"><a href="#题二" class="headerlink" title="题二"></a>题二</h4><p>设有两个单片机系统甲和乙。两系统均工作于全双工中断方式，串行口工作于方式３，第９位数据为奇偶校验位，CPU 时钟为11.0592MHz。定时器T1工作于方式２，波特率2400, SMOD=0,将系统乙内外部数据存储器7C00H~7CC7H共200个字节的数据传送到系统甲中外部数据存储器7E00H~7EC7H中；将系统甲内外部数据存储器7C00H~7CC7H共200个字节的数据传送到系统乙中外部数据存储器7E00H~7EC7H中。编写两个系统的程序</p><ul><li><p>分析：<br>源数据均在7C00H~7CC7H，共200个字节，目的数据区首址为7E00H<br>　SCON=11010000B=D0H  ,<br> PCON=00H  ,<br> TMOD=00100000B=20H<br> 2400=(20/32) x(11.0592/12(28-Z))  ,   Z=F4H</p></li><li><p>位传送时需通过累加器C<br>奇偶标志位P位于PSW（程序状态寄存器），观测累加器A中“1”的个数，P=0,1有偶数个；P=1,1有奇数个</p></li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br></pre></td><td class="code"><pre><span class="line">ADDR1H   EQU     30H        ;源数据指针</span><br><span class="line">ADDR1L   EQU     31H        ;</span><br><span class="line">ADDR2H   EQU     32H        ;目的数据指针</span><br><span class="line">ADDR2L   EQU     33H       </span><br><span class="line">RECV     EQU     34H       ；接收数据计数器</span><br><span class="line">SEND     EQU     35H       ；发送数据计数器</span><br><span class="line">         ORG    0000H</span><br><span class="line">         LJMP     MAIN</span><br><span class="line">         ORG    0023H</span><br><span class="line">         LJMP     INTS     ；保护断点</span><br><span class="line">         ORG  0030H</span><br><span class="line">MAIN: 	MOV  ADDR2H,  #7EH     ; 目的指针初值，存发送数据</span><br><span class="line">  	MOV  ADDR2L,  #0H</span><br><span class="line">	MOV  ADDR1H,  #7CH     ; 源指针初值，存接收数据</span><br><span class="line">  	MOV  ADDR1L,  #0H</span><br><span class="line">	MOV  RECV,  #0H            ;  接收数据初值</span><br><span class="line">	MOV  SEND,  #0H            ;  发送数据初值</span><br><span class="line"></span><br><span class="line">	MOV TMOD,   #20H           ;T1初始化</span><br><span class="line"> 	MOV TH1,       #0F4H</span><br><span class="line">	MOV TL1,       #0F4H</span><br><span class="line">	SETB  TR1</span><br><span class="line">	MOV  SCON,  #0D0H       ; 串口初始化   1101 0000</span><br><span class="line">	MOV  PCON , #0</span><br><span class="line">	SETB  ES                          ; 开串口中断</span><br><span class="line">	SETB  EA</span><br><span class="line"></span><br><span class="line">	MOV  DPH,  ADDR1H    ;源指针初值送DPTR</span><br><span class="line">	MOV  DPL,  ADDR1L</span><br><span class="line">	MOVX  A,   @DPTR　　；取第一个要发送的数</span><br><span class="line">	MOV   C,  P                     ;  取奇偶校验位</span><br><span class="line">	MOV  TB8,  C　　　　　；奇偶校验位送TB8</span><br><span class="line">	MOV  SBUF,  A　　　　；发送一个数　</span><br><span class="line">	INC    SEND		　　；发送计数器加１</span><br><span class="line">LOOP:  LJMP  LOOP　　　　　</span><br><span class="line"></span><br><span class="line">INTS:	 PUSH   PSW　　；保护断点</span><br><span class="line">	PUSH   ACC</span><br><span class="line">	PUSH   DPL</span><br><span class="line">	PUSH   DPH </span><br><span class="line">	JB    TI,    TPROG  ；每发送完一个数据，发送中断标志位TI置1</span><br><span class="line">	JB    RI,    RPROG</span><br><span class="line">	LJMP  INTSE    ；没有中断，恢复现场</span><br><span class="line">TPROG:  CLR  TI　　　　　　　            ；发中断处理,清标志</span><br><span class="line">	MOV   A,  SEND</span><br><span class="line">	CJNE  A,  #200,  TPROG1　　；200个数没发完</span><br><span class="line">	LJMP  INTSE　　　　　　　   ；200个数发完，退出中断</span><br><span class="line">TPROG1: INC       DPTR </span><br><span class="line">	MOV    ADDR1H,   DPH　      ；改源指针</span><br><span class="line">	MOV    ADDR1L,   DPL　</span><br><span class="line">       MOV   DPH,  ADDR1H</span><br><span class="line">	MOV   DPL,  ADDR1L</span><br><span class="line">	MOVX  A,    @DPTR</span><br><span class="line">	MOV   C,   P</span><br><span class="line">	MOV   TB8,   C</span><br><span class="line">	MOV    SBUF,  A　　</span><br><span class="line">	INC       SEND　　　　　       ；发送计数器加1</span><br><span class="line">	LJMP    INTSE </span><br><span class="line"></span><br><span class="line">RPROG:  CLR  RI　　　　      ；接收中断处理程序</span><br><span class="line">	MOV  A,  RECV</span><br><span class="line">	CJNE  A,  #200,  RPROG1</span><br><span class="line">	LJMP  INTSE　　   ；200个数接收完，退出中断服务程序</span><br><span class="line">RPROG1:  MOV  A,  SBUF　  ；取收到的数据</span><br><span class="line">	MOV  C,   RB8　   ；收到的第9位送C</span><br><span class="line">	ANL   C,   /P</span><br><span class="line">       CPL C</span><br><span class="line">	JC    ERR　　        ；C为1，校验出错　　　</span><br><span class="line">	MOV   DPH,  ADDR2H</span><br><span class="line">	MOV   DPL,  ADDR2L　；</span><br><span class="line">	MOVX  @DPTR,   A </span><br><span class="line">       INC    DPTR</span><br><span class="line">	MOV ADDR2H,   DPH</span><br><span class="line">	MOV   ADDR2L,  DPL 　；修改目的数据指针</span><br><span class="line">	INC  RECV　　　　　　；修改接收计数器</span><br><span class="line">	LJMP   INTSE</span><br><span class="line"></span><br><span class="line">ERR:   SETB  F0</span><br><span class="line">INTSE: POP   DPH    ；恢复断点</span><br><span class="line">	POP    DPL</span><br><span class="line">	POP    A </span><br><span class="line">	POP     PSW</span><br><span class="line">	RETI　　　；中断返回</span><br><span class="line">       END </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+              </div>
+            </details></article><div class="post-copyright"><div class="post-copyright__title"><span class="post-copyright-info"><h>单片机原理及应用</h></span></div><div class="post-copyright__type"><span class="post-copyright-info"><a href="https://www.oristar.top/posts/6dd71ccc.html">https://www.oristar.top/posts/6dd71ccc.html</a></span></div><div class="post-copyright-m"><div class="post-copyright-m-info"><div class="post-copyright-a"><h>作者</h><div class="post-copyright-cc-info"><h>ℒ</h></div></div><div class="post-copyright-c"><h>发布于</h><div class="post-copyright-cc-info"><h>2023-10-21</h></div></div><div class="post-copyright-u"><h>更新于</h><div class="post-copyright-cc-info"><h>2023-11-18</h></div></div><div class="post-copyright-c"><h>许可协议</h><div class="post-copyright-cc-info"><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a rel="noopener" target="_blank" title="CC BY-NC-SA 4.0" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></div></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://s2.loli.net/2023/10/21/3X7gdVDwLStY9vq.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://lib.baomitu.com/social-share.js/1.0.16/css/share.min.css" media="print" onload="this.media='all'"><script src="https://lib.baomitu.com/social-share.js/1.0.16/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/f21a0185.html"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/09/07/27yk3jErK1cYhX4.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">通信原理</div></div></a></div><div class="next-post pull-right"><a href="/posts/9d6528d2.html"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/10/22/5Hdx9mAXBTW6N2e.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">交换技术与通信网</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95%E7%89%87%E6%9C%BA%E7%BB%93%E6%9E%84%E5%8E%9F%E7%90%86"><span class="toc-number">1.</span> <span class="toc-text">单片机结构原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F"><span class="toc-number">2.</span> <span class="toc-text">指令系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#51%E7%B3%BB%E5%88%97%E5%8D%95%E7%89%87%E6%9C%BA%E7%9A%84%E4%B8%AD%E6%96%AD%E7%B3%BB%E7%BB%9F"><span class="toc-number">3.</span> <span class="toc-text">51系列单片机的中断系统</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%94%E7%94%A8"><span class="toc-number">3.1.</span> <span class="toc-text">应用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E4%B8%80"><span class="toc-number">3.1.1.</span> <span class="toc-text">题目一</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E4%BA%8C"><span class="toc-number">3.1.2.</span> <span class="toc-text">题目二</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MCS-51%E5%8D%95%E7%89%87%E6%9C%BA%E5%AE%9A%E6%97%B6-%E8%AE%A1%E6%95%B0%E5%99%A8"><span class="toc-number">4.</span> <span class="toc-text">MCS - 51单片机定时&#x2F;计数器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E5%BC%8F-0-%E7%9A%84%E5%BA%94%E7%94%A8"><span class="toc-number">4.1.</span> <span class="toc-text">方式  0 的应用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95%E7%89%87%E6%9C%BA%E4%B8%B2%E8%A1%8C%E5%8F%A3%E5%8F%8A%E5%BA%94%E7%94%A8"><span class="toc-number">5.</span> <span class="toc-text">单片机串行口及应用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%94%E7%94%A8"><span class="toc-number">5.1.</span> <span class="toc-text">应用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A2%98%E4%B8%80"><span class="toc-number">5.1.1.</span> <span class="toc-text">题一</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A2%98%E4%BA%8C"><span class="toc-number">5.1.2.</span> <span class="toc-text">题二</span></a></li></ol></li></ol></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="ft"><div class="ft-item-1"><div class="t-top"><div class="t-t-l"><p class="ft-t t-l-t">修仙语录</p><div class="bg-ad"><div>曾经天上三千劫，又在人间五百年。<br >腰下剑锋横紫电，炉中丹焰起苍烟。<br >才骑白鹿过苍海，复跨青牛入洞天。<br >小技等闲聊戏尔，无人知我是真仙。</div><div class="btn-xz-box"><a class="btn-xz" target="_blank" rel="noopener" href="https://www.4399.com/">点击开启修仙之路</a></div></div></div><div class="t-t-r"><p class="ft-t t-l-t">网站导航</p><ul class="ft-links"><li><a target="_blank" rel="noopener" href="https://search.chongbuluo.com/">虫部落</a><a target="_blank" rel="noopener" href="https://www.52pojie.cn/">吾爱破解</a></li><li><a target="_blank" rel="noopener" href="https://imagestool.com/zh_CN/index.html">图片转换</a><a target="_blank" rel="noopener" href="https://smms.app/">图床</a></li><li><a target="_blank" rel="noopener" href="https://www.latexlive.com/">Latex</a><a target="_blank" rel="noopener" href="https://poe.com/chatgpt">Chatgpt</a></li><li><a target="_blank" rel="noopener" href="https://xiezuocat.com/#/?s=catbd18">智能写作</a><a target="_blank" rel="noopener" href="http://oeasy.org/">Oeasy</a></li><li><a target="_blank" rel="noopener" href="https://convertio.co/zh/">文件转换</a><a target="_blank" rel="noopener" href="https://csdiy.wiki/">自学指南</a></li><li><a target="_blank" rel="noopener" href="https://www.lvruanhome.com/">绿软之家</a><a target="_blank" rel="noopener" href="https://acgfantuan.com/">ACG饭团</a></li></ul></div></div></div><div class="ft-item-2"><p class="ft-t">推荐友链</p><div class="ft-img-group"><div class="img-group-item"><a target="_blank" rel="noopener" href="https://www.fomal.cc/" title="Fomalhaut🥝"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.bitiful.net/img/avatar.webp" alt=""/></a></div><div class="img-group-item"><a target="_blank" rel="noopener" href="https://frechen026.github.io/" title="Frechen026"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/03/10/yFU1XmJBxQcCoz6.jpg" alt=""/></a></div><div class="img-group-item"><a target="_blank" rel="noopener" href="https://study.zwjjiaozhu.top/" title="西园公子"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://study.zwjjiaozhu.top/avatar.jpg" alt=""/></a></div><div class="img-group-item"><a target="_blank" rel="noopener" href="https://fe32.top/" title="唐志远の博客"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://bu.dusays.com/2022/05/02/626f92e193879.jpg" alt=""/></a></div><div class="img-group-item"><a target="_blank" rel="noopener" href="https://akilar.top/" title="Akilarの糖果屋"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.bitiful.net/img/akilar.jpg" alt=""/></a></div><div class="img-group-item"><a target="_blank" rel="noopener" href="https://blog.anheyu.com/" title="安知鱼"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.bitiful.net/img/anzhiyu.jpg" alt=""/></a></div></div></div></div><div class="copyright"><span><b>&copy;2023 - 2024</b></span><span><b>&nbsp;&nbsp;By ℒ</b></span></div><div class="footer_custom_text">愿你前行的道路有群星闪耀，愿你留下的足迹有百花绽放。<br />你即是上帝的馈赠，世界因你而瑰丽。✨✨</div><div id="workboard"></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" title="博客框架为Hexo_v6.3.0"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.bitiful.net/badge/Frame-Hexo-blue.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://butterfly.js.org/" style="margin-inline:5px" title="主题版本Butterfly_v4.3.1"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.bitiful.net/badge/Theme-Butterfly-6513df.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://vercel.com/" style="margin-inline:5px" title="本站采用多线部署，主线路托管于Vercel"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.bitiful.net/badge/Hosted-Vercel-brightgreen.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" title="本网站源码由Github提供存储仓库"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.bitiful.net/badge/Source-Github-d021d6.svg" alt=""/></a><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" title=" 本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&amp;logo=Claris" alt=""/></a></p></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button><button id="go-down" type="button" title="直达底部" onclick="btf.scrollToDest(document.body.scrollHeight, 500)"><i class="fas fa-arrow-down"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div class="js-pjax" id="rightMenu"><div class="rightMenu-group rightMenu-small"><a class="rightMenu-item" href="javascript:window.history.back();"><i class="fa fa-arrow-left"></i></a><a class="rightMenu-item" href="javascript:window.history.forward();"><i class="fa fa-arrow-right"></i></a><a class="rightMenu-item" href="javascript:window.location.reload();"><i class="fa fa-refresh"></i></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-text"><a class="rightMenu-item" href="javascript:rmf.copySelect();"><i class="fa fa-copy"></i><span>复制</span></a><a class="rightMenu-item" href="javascript:window.open(&quot;https://www.baidu.com/s?wd=&quot;+window.getSelection().toString());window.location.reload();"><i class="fa fa-search"></i><span>百度搜索</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-too"><a class="rightMenu-item" href="javascript:window.open(window.getSelection().toString());window.location.reload();"><i class="fa fa-link"></i><span>转到链接</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-paste"><a class="rightMenu-item" href="javascript:rmf.paste()"><i class="fa fa-copy"></i><span>粘贴</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-post"><a class="rightMenu-item" href="javascript:rmf.copyWordsLink()"><i class="fa fa-link"></i><span>复制本文地址</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-to"><a class="rightMenu-item" href="javascript:rmf.openWithNewTab()"><i class="fa fa-window-restore"></i><span>新窗口打开</span></a><a class="rightMenu-item" id="menu-too" href="javascript:rmf.open()"><i class="fa fa-link"></i><span>转到链接</span></a><a class="rightMenu-item" href="javascript:rmf.copyLink()"><i class="fa fa-copy"></i><span>复制链接</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-img"><a class="rightMenu-item" href="javascript:rmf.saveAs()"><i class="fa fa-download"></i><span>保存图片</span></a><a class="rightMenu-item" href="javascript:rmf.openWithNewTab()"><i class="fa fa-window-restore"></i><span>在新窗口打开</span></a><a class="rightMenu-item" href="javascript:rmf.copyLink()"><i class="fa fa-copy"></i><span>复制图片链接</span></a></div><div class="rightMenu-group rightMenu-line"><a class="rightMenu-item" href="javascript:rmf.switchReadMode();"><i class="fa fa-book"></i><span>阅读模式</span></a><a class="rightMenu-item" href="javascript:rmf.switchDarkMode();"><i class="fa fa-moon"></i><span>昼夜切换</span></a><a class="rightMenu-item" href="/about/"><i class="fa fa-info-circle"></i><span>关于博客</span></a><a class="rightMenu-item" href="javascript:rmf.fullScreen();"><i class="fas fa-expand"></i><span>切换全屏</span></a><a class="rightMenu-item" href="javascript:window.print();"><i class="fa-solid fa-print"></i><span>打印页面</span></a></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.staticfile.org/fancyapps-ui/4.0.31/fancybox.umd.min.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/instant.page/5.1.0/instantpage.min.js" type="module"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/vanilla-lazyload/17.3.1/lazyload.iife.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/node-snackbar/0.1.16/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (true){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.1
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        insertScript: [200, () => {
+          document.querySelectorAll('mjx-container').forEach(node => {
+            if (node.hasAttribute('display')) {
+              btf.wrap(node, 'div', { class: 'mathjax-overflow' })
+            } else {
+              btf.wrap(node, 'span', { class: 'mathjax-overflow' })
+            }
+          });
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script></div><script defer src="https://npm.elemecdn.com/jquery@latest/dist/jquery.min.js"></script><script type="text/javascript" src="https://cdn1.tianli0.top/npm/jquery@latest/dist/jquery.min.js"></script><script defer data-pjax src="/js/cat.min.js"></script><script type="text/javascript" src="/js/rightmenu.min.js"></script><canvas id="snow"></canvas><script async src="/js/snow.min.js"></script><canvas id="universe"></canvas><script async src="/js/universe.min.js"></script><script defer  src="/js/ali_font.min.js"></script><script defer  src="/js/liang.js"></script><script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script><div class="aplayer no-destroy" data-id="7598476578" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true" > </div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="30" mobile="false" src="https://cdnjs.cloudflare.com/ajax/libs/butterfly-extsrc/1.1.3/canvas-nest.min.js"></script><link rel="stylesheet" href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.js"></script><script src="https://cdn1.tianli0.top/npm/js-heo@1.0.12/metingjs/Meting.min.js"></script><script src="https://lib.baomitu.com/pjax/0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show","#web_bg",".js-pjax","#bibi","body > title","#app","#tag-echarts","#posts-echart","#categories-echarts"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --> <script data-pjax>if(document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+    var parent = document.getElementById('recent-posts');
+    var child = '<div class="recent-post-item" style="width:100%;height: auto"><div id="catalog_magnet"><div class="magnet_item"><a class="magnet_link" href="https://www.oristar.top/categories/通信/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">📚 通信笔记 (8)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://www.oristar.top/categories/杂谈/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🩸 拾枝杂谈 (2)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item" style="visibility: hidden"></div><a class="magnet_link_more"  href="https://www.oristar.top/categories" style="flex:1;text-align: center;margin-bottom: 10px;">查看更多...</a></div></div>';
+    console.log('已挂载magnet')
+    parent.insertAdjacentHTML("afterbegin",child)}
+     </script><style>#catalog_magnet{flex-wrap: wrap;display: flex;width:100%;justify-content:space-between;padding: 10px 10px 0 10px;align-content: flex-start;}.magnet_item{flex-basis: calc(33.333333333333336% - 5px);background: #f2f2f2;margin-bottom: 10px;border-radius: 8px;transition: all 0.2s ease-in-out;}.magnet_item:hover{background: #778899}.magnet_link_more{color:#555}.magnet_link{color:black}.magnet_link:hover{color:white}@media screen and (max-width: 600px) {.magnet_item {flex-basis: 100%;}}.magnet_link_context{display:flex;padding: 10px;font-size:16px;transition: all 0.2s ease-in-out;}.magnet_link_context:hover{padding: 10px 20px;}</style>
+    <style></style><script data-pjax>
+  function butterfly_swiper_injector_config(){
+    var parent_div_git = document.getElementById('recent-posts');
+    var item_html = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms;"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/4da13fe.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/01/10/uLI37mOEQps1KV9.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-01-10</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/4da13fe.html&quot;);" href="javascript:void(0);" alt="">Matlab入门</a><div class="blog-slider__text">Matlab入门</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/4da13fe.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/3c50d03d.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/01/10/fEuP2e6rng1I9tK.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-01-06</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/3c50d03d.html&quot;);" href="javascript:void(0);" alt="">Markdown语法</a><div class="blog-slider__text">Markdown语法</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/3c50d03d.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载butterfly_swiper')
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  var elist = 'undefined'.split(',');
+  var cpage = location.pathname;
+  var epage = '/';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_swiper_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_swiper_injector_config();
+  }
+  </script><script defer src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer data-pjax src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js"></script><div class="js-pjax"><script async="async">var arr = document.getElementsByClassName('recent-post-item');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '2s');
+    arr[i].setAttribute('data-wow-delay', '200ms');
+    arr[i].setAttribute('data-wow-offset', '30');
+    arr[i].setAttribute('data-wow-iteration', '1');
+  }</script><script async="async">var arr = document.getElementsByClassName('blog-slider swiper-container-fade swiper-container-horizontal');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '1.5s');
+    arr[i].setAttribute('data-wow-delay', '200ms');
+    arr[i].setAttribute('data-wow-offset', '30');
+    arr[i].setAttribute('data-wow-iteration', '1');
+  }</script><script async="async">var arr = document.getElementsByClassName('catalog_magnet');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '1.5s·');
+    arr[i].setAttribute('data-wow-delay', '200ms');
+    arr[i].setAttribute('data-wow-offset', '30');
+    arr[i].setAttribute('data-wow-iteration', '1');
+  }</script><script async="async">var arr = document.getElementsByClassName('card-widget');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '1.5s');
+    arr[i].setAttribute('data-wow-delay', '200ms');
+    arr[i].setAttribute('data-wow-offset', '30');
+    arr[i].setAttribute('data-wow-iteration', '1');
+  }</script></div><script defer src="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/wow.min.js"></script><script defer src="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/wow_init.js"></script><script async src="//at.alicdn.com/t/font_2032782_8d5kxvn09md.js"></script><!-- hexo injector body_end end --></body></html>
