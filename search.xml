@@ -4,11 +4,11 @@
   
     
     <entry>
-      <title>一些遇到的疑问</title>
+      <title>遇到的一些疑问</title>
       <link href="/posts/af2fc76f.html"/>
       <url>/posts/af2fc76f.html</url>
       
-        <content type="html"><![CDATA[<ol><li><p>疑问：傅里叶变换F(f)与F(w)幅度是否发生改变？<br>在网上找了下有关的，感觉有点道理<br><a href="https://blog.csdn.net/Clara_D/article/details/115839633">https://blog.csdn.net/Clara_D/article/details/115839633</a><br><a href="https://zhuanlan.zhihu.com/p/365671296">https://zhuanlan.zhihu.com/p/365671296</a></p><p>这里有点困扰的是<script type="math/tex">2\pi \delta (2\pi f )=\delta (f)</script><br>可以根据定义<script type="math/tex">\int_{0_{-} }^{0_{+  } } \delta (t)dt=1</script><br>横轴压缩，纵轴拉伸，可以看到是相等的<br>所以，姑且认为F(f)与为F(w)幅度乘2Π。。。<br>很好，浪费了一小时。。。</p></li></ol><ol><li>疑问：外部电路接入LC回路的部分电感，流出电流I,探究LC回路中的分流时，总电阻保持不变？<br>猜测：可能是近似，为方便计算</li></ol>]]></content>
+        <content type="html"><![CDATA[<ol><li><p>疑问：傅里叶变换F(f)与F(w)幅度是否发生改变？<br>在网上找了下有关的，感觉有点道理<br><a href="https://blog.csdn.net/Clara_D/article/details/115839633">https://blog.csdn.net/Clara_D/article/details/115839633</a><br><a href="https://zhuanlan.zhihu.com/p/365671296">https://zhuanlan.zhihu.com/p/365671296</a></p><p>这里有点困扰的是<script type="math/tex">2\pi \delta (2\pi f )=\delta (f)</script><br>可以根据定义<script type="math/tex">\int_{0_{-} }^{0_{+  } } \delta (t)dt=1</script><br>横轴压缩，纵轴拉伸，可以看到是相等的<br>所以，姑且认为F(f)与为F(w)幅度乘2Π。。。</p></li></ol><ol><li>疑问：外部电路接入LC回路的部分电感，流出电流I,探究LC回路中的分流时，总电阻保持不变？<br>猜测：可能是近似，为方便计算</li></ol>]]></content>
       
       
       <categories>

@@ -7677,15 +7677,7 @@ div#archive {
   border-right: 0.5px solid #808080;
 }
 
-/* 下一篇文章的圆角 */
-.relatedPosts > .relatedPosts-list > div,
-#pagination.pagination-post,
-.postImgHover img,
-#pagination .prev-post img,
-#pagination .next-post img,
-.relatedPosts > .relatedPosts-list > div img {
-  border-radius: 12px;
-}
+
 
 /* 分割线 */
 hr {
