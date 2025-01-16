@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>526笔试</title>
+      <link href="/posts/c4b3cf0.html"/>
+      <url>/posts/c4b3cf0.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="DSP"><a href="#DSP" class="headerlink" title="DSP"></a>DSP</h1><h2 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h2><ol><li><p>为什么用数字信号？<br>计算机存储器是一个个孤立单元，长度是有限的，只能处理数字信号</p></li><li><p>数字信号处理系统<br>采样保持器-A/D变换器（采样频率限制）<br>D/A变换器-模拟低通滤波器</p></li><li><p>数字信号处理优点：</p><ul><li>抗干扰</li><li>便于大规模集成</li><li>可靠性强</li><li>精度高，电阻，电容误差10%，再有温度，湿度影响，误差更大</li><li>灵活性强，改系统参数，程序</li><li>严格线性相位（FIR）</li><li>存储信号，用延迟实现非因果</li><li>利用图像相关性，压缩编码</li></ul></li><li><p>缺点：功耗（最主要问题）</p></li><li>开创年代：1965（FFT算法提出），理论更早</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 考研 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>考研初试</title>
       <link href="/posts/9076aa2c.html"/>
       <url>/posts/9076aa2c.html</url>
@@ -27,7 +46,7 @@
       <link href="/posts/af2fc76f.html"/>
       <url>/posts/af2fc76f.html</url>
       
-        <content type="html"><![CDATA[<ol><li><p>疑问：傅里叶变换F(f)与F(w)幅度是否发生改变？<br>在网上找了下有关的，感觉有点道理<br><a href="https://blog.csdn.net/Clara_D/article/details/115839633">https://blog.csdn.net/Clara_D/article/details/115839633</a><br><a href="https://zhuanlan.zhihu.com/p/365671296">https://zhuanlan.zhihu.com/p/365671296</a></p><p>这里有点困扰的是<script type="math/tex">2\pi \delta (2\pi f )=\delta (f)</script><br>可以根据定义<script type="math/tex">\int_{0_{-} }^{0_{+  } } \delta (t)dt=1</script><br>横轴压缩，纵轴拉伸，可以看到是相等的<br>所以，姑且认为F(f)与为F(w)幅度乘2Π。。。</p></li></ol><ol><li>疑问：外部电路接入LC回路的部分电感，流出电流I,探究LC回路中的分流时，总电阻保持不变？<br>猜测：可能是近似，为方便计算</li></ol>]]></content>
+        <content type="html"><![CDATA[<ol><li><p>疑问：傅里叶变换F(f)与F(w)幅度是否发生改变？<br>在网上找了下有关的，感觉有点道理<br><a href="https://blog.csdn.net/Clara_D/article/details/115839633">https://blog.csdn.net/Clara_D/article/details/115839633</a><br><a href="https://zhuanlan.zhihu.com/p/365671296">https://zhuanlan.zhihu.com/p/365671296</a></p><p>这里有点困扰的是<script type="math/tex">2\pi \delta (2\pi f )=\delta (f)</script><br>可以根据定义<script type="math/tex">\int_{0_{-} }^{0_{+  } } \delta (t)dt=1</script><br>横轴压缩，纵轴拉伸，可以看到是相等的<br>所以，姑且认为F(f)与为F(w)幅度乘2Π。。。<br><strong>经过考研的再次学习，以上认知正确</strong></p></li></ol><ol><li>疑问：外部电路接入LC回路的部分电感，流出电流I,探究LC回路中的分流时，总电阻保持不变？<br>猜测：可能是近似，为方便计算</li></ol>]]></content>
       
       
       <categories>
@@ -197,7 +216,7 @@
       <link href="/posts/8862c758.html"/>
       <url>/posts/8862c758.html</url>
       
-        <content type="html"><![CDATA[<h2 id="原由"><a href="#原由" class="headerlink" title="原由"></a>原由</h2><ul><li>电工电子实验老师让我们在虚拟机上装ISE(因为ISE只能在Win10系统装)，本是一件很轻松的事，但装虚拟机这一步就卡住了，搞了一下午才装好，还是值得记录一下的。</li></ul><h2 id="Microsoft-runtime-dll未能完成安装"><a href="#Microsoft-runtime-dll未能完成安装" class="headerlink" title="Microsoft runtime dll未能完成安装"></a>Microsoft runtime dll未能完成安装</h2><p>&emsp;&emsp;点开set up.exe文件，弹出这么个玩意，经过网上搜索，发现遇到这问题的还蛮多的，解决如下：</p><ol><li>弹出“Microsoft runtime dll未能完成安装”这个窗口时，不要点确定，就挂在那，按住<kbd>win</kbd>+<kbd>R</kbd>,输入%temp%,看一下时间，在窗口里点击时间几乎差不多的<strong>文件夹</strong>，会弹出窗口需要点击继续才能进去，但因为之前挂在屏幕中间的安装图的原因，点不了</li><li>这时点之前挂在那的窗口的确定，安装图消失了，把那个需要点击继续的那个窗口往旁边移一下</li><li>这时再点开set up.exe文件，弹出“Microsoft runtime dll未能完成安装”这个窗口时，不要点确定，点击另一个窗口中的继续，那个<strong>文件夹</strong>就可以打开了</li><li>点击VMwareWorkstation.msi那个，就能安装了（一路点下去就行）。</li></ol><h2 id="无权输入许可证密钥，请使用系统管理员账户重试"><a href="#无权输入许可证密钥，请使用系统管理员账户重试" class="headerlink" title="无权输入许可证密钥，请使用系统管理员账户重试"></a>无权输入许可证密钥，请使用系统管理员账户重试</h2><ol><li>点开VMware软件时，要想使用，需要输入许可证密钥，但他喵的又不允许输入，又在网上搜素了半天，要在终端上执行，两个方法打开终端：</li></ol><ul><li>鼠标右键开始菜单，选择Windows PowerShell(管理员)，以为到这就差不多了，结果他喵的牛马电脑弹出没有与之关联的应用来执行该操作,<del>我没有关联尼玛</del>，没办法，只能用第二种方法</li><li>摁住<kbd>Shift</kbd> + <kbd>Ctrl</kbd>+<kbd>Esc</kbd>,进入任务管理器，点击”文件”-“运行新任务”，输入PowerShell,要勾选“使用管理员身份创建这个任务”，这样就进入终端了</li></ul><ol><li>右键点击VMware软件，选择打开文件所在位置，复制“该位置\x64\，”</li><li>在终端输入 cd 复制的内容(Ctrl+V)，按回车</li><li>再输入<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.\vmware-vmx.exe --new-sn 密钥内容</span><br></pre></td></tr></table></figure></li><li>如果没报错，那就成功啦！</li></ol>]]></content>
+        <content type="html"><![CDATA[<h2 id="原由"><a href="#原由" class="headerlink" title="原由"></a>原由</h2><ul><li>电工电子实验要在虚拟机上装ISE(因为ISE只能在Win10系统装)，本是一件很轻松的事，但装虚拟机这一步就卡住了，搞了一下午才装好，还是值得记录一下的。</li></ul><h2 id="Microsoft-runtime-dll未能完成安装"><a href="#Microsoft-runtime-dll未能完成安装" class="headerlink" title="Microsoft runtime dll未能完成安装"></a>Microsoft runtime dll未能完成安装</h2><p>&emsp;&emsp;点开set up.exe文件，弹出这么个玩意，经过网上搜索，发现遇到这问题的还蛮多的，解决如下：</p><ol><li>弹出“Microsoft runtime dll未能完成安装”这个窗口时，不要点确定，就挂在那，按住<kbd>win</kbd>+<kbd>R</kbd>,输入%temp%,看一下时间，在窗口里点击时间几乎差不多的<strong>文件夹</strong>，会弹出窗口需要点击继续才能进去，但因为之前挂在屏幕中间的安装图的原因，点不了</li><li>这时点之前挂在那的窗口的确定，安装图消失了，把那个需要点击继续的那个窗口往旁边移一下</li><li>这时再点开set up.exe文件，弹出“Microsoft runtime dll未能完成安装”这个窗口时，不要点确定，点击另一个窗口中的继续，那个<strong>文件夹</strong>就可以打开了</li><li>点击VMwareWorkstation.msi那个，就能安装了（一路点下去就行）。</li></ol><h2 id="无权输入许可证密钥，请使用系统管理员账户重试"><a href="#无权输入许可证密钥，请使用系统管理员账户重试" class="headerlink" title="无权输入许可证密钥，请使用系统管理员账户重试"></a>无权输入许可证密钥，请使用系统管理员账户重试</h2><ol><li>点开VMware软件时，要想使用，需要输入许可证密钥，但他喵的又不允许输入，又在网上搜素了半天，要在终端上执行，两个方法打开终端：</li></ol><ul><li>鼠标右键开始菜单，选择Windows PowerShell(管理员)，以为到这就差不多了，结果他喵的牛马电脑弹出没有与之关联的应用来执行该操作,<del>我没有关联尼玛</del>，没办法，只能用第二种方法</li><li>摁住<kbd>Shift</kbd> + <kbd>Ctrl</kbd>+<kbd>Esc</kbd>,进入任务管理器，点击”文件”-“运行新任务”，输入PowerShell,要勾选“使用管理员身份创建这个任务”，这样就进入终端了</li></ul><ol><li>右键点击VMware软件，选择打开文件所在位置，复制“该位置\x64\，”</li><li>在终端输入 cd 复制的内容(Ctrl+V)，按回车</li><li>再输入<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.\vmware-vmx.exe --new-sn 密钥内容</span><br></pre></td></tr></table></figure></li><li>如果没报错，那就成功啦！</li></ol>]]></content>
       
       
       
