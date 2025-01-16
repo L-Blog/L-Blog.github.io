@@ -4,11 +4,11 @@
   
     
     <entry>
-      <title>526笔试</title>
+      <title>DSP</title>
       <link href="/posts/c4b3cf0.html"/>
       <url>/posts/c4b3cf0.html</url>
       
-        <content type="html"><![CDATA[<h1 id="DSP"><a href="#DSP" class="headerlink" title="DSP"></a>DSP</h1><h2 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h2><ol><li><p>为什么用数字信号？<br>计算机存储器是一个个孤立单元，长度是有限的，只能处理数字信号</p></li><li><p>数字信号处理系统<br>采样保持器-A/D变换器（采样频率限制）<br>D/A变换器-模拟低通滤波器</p></li><li><p>数字信号处理优点：</p><ul><li>抗干扰</li><li>便于大规模集成</li><li>可靠性强</li><li>精度高，电阻，电容误差10%，再有温度，湿度影响，误差更大</li><li>灵活性强，改系统参数，程序</li><li>严格线性相位（FIR）</li><li>存储信号，用延迟实现非因果</li><li>利用图像相关性，压缩编码</li></ul></li><li><p>缺点：功耗（最主要问题）</p></li><li>开创年代：1965（FFT算法提出），理论更早</li></ol>]]></content>
+        <content type="html"><![CDATA[<h2 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h2><details class="folding-tag" grey><summary> 详解 </summary>              <div class='content'>              <ol><li><p>为什么用数字信号？<br>计算机存储器是一个个孤立单元，长度是有限的，只能处理数字信号</p></li><li><p>数字信号处理系统<br>采样保持器-A/D变换器（采样频率限制）<br>D/A变换器-模拟低通滤波器</p></li><li><p>数字信号处理优点：</p><ul><li>抗干扰</li><li>便于大规模集成</li><li>可靠性强</li><li>精度高，电阻，电容误差10%，再有温度，湿度影响，误差更大</li><li>灵活性强，改系统参数，程序</li><li>严格线性相位（FIR）</li><li>存储信号，用延迟实现非因果</li><li>利用图像相关性，压缩编码</li></ul></li><li><p>缺点：功耗（最主要问题）</p></li><li>开创年代：1965（FFT算法提出），理论更早</li></ol>              </div>            </details>]]></content>
       
       
       <categories>
