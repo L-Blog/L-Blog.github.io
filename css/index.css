@@ -6423,34 +6423,6 @@ body::-webkit-scrollbar {
   }
 
 
-
-
-/*最近文章修改*/
-
-#aside-content .aside-list > .aside-list-item .content > .title {
-  -webkit-line-clamp: 3;
-  font-weight: 700;
-  padding: 2px 0;
-}
-#aside-content .aside-list > .aside-list-item {
-  padding: 8px;
-  padding-top: 6px !important;
-  padding-bottom: 6px !important;
-  border-radius: 12px;
-  transition: 0.3s;
-  margin: 4px 0;
-  cursor: pointer;
-}
-#aside-content .aside-list > .aside-list-item .thumbnail {
-  border-radius: 8px;
-  border: var(--style-border);
-}
-
-
-
-
-
-
 /* 侧边栏归档样式修改  */
 /* 归档样式 */
 span.card-archive-list-count {
@@ -6869,7 +6841,7 @@ div#rightside {
     height: 260px !important;
   }
   .blog-slider__img {
-    width: 50% !important;
+    width: 16.8em !important;
     height: 100% !important;
   }
 }
