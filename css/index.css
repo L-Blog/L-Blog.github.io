@@ -6869,7 +6869,7 @@ div#rightside {
     height: 260px !important;
   }
   .blog-slider__img {
-    width: 240px !important;
+    width: 40% !important;
     height: 100% !important;
   }
 }
